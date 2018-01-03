@@ -1,4 +1,4 @@
-TOR SUPPORT IN LITECOIN
+TOR SUPPORT IN GARLICOIN
 ======================
 
 It is possible to run Garlicoin as a Tor hidden service, and connect to such services.

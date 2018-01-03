@@ -9,10 +9,10 @@ BITCOINCLI=${BITCOINCLI:-$SRCDIR/garlicoin-cli}
 BITCOINTX=${BITCOINTX:-$SRCDIR/garlicoin-tx}
 BITCOINQT=${BITCOINQT:-$SRCDIR/qt/garlicoin-qt}
 
-[ ! -x $BITCOIND ] && echo "$LITECOIND not found or not executable." && exit 1
+[ ! -x $BITCOIND ] && echo "$GARLICOIND not found or not executable." && exit 1
 
 # The autodetected version git tag can screw up manpage output a little bit
-BTCVER=($($LITECOINCLI --version | head -n1 | awk -F'[ -]' '{ print $6, $7 }'))
+BTCVER=($($GARLICOINCLI --version | head -n1 | awk -F'[ -]' '{ print $6, $7 }'))
 
 # Create a footer file with copyright content.
 # This gets autodetected fine for bitcoind if --version-string is not set,
