@@ -3,7 +3,7 @@ Garlicoin Core integration/staging tree
 
 [![Build Status](https://travis-ci.org/garlicoin-project/garlicoin.svg?branch=master)](https://travis-ci.org/garlicoin-project/garlicoin)
 
-https://garlicoin.io
+http://garlicoin.io
 
 What is Garlicoin?
 ----------------
@@ -16,7 +16,7 @@ software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
 the Garlicoin Core software, see 
-[https://garlicoin.io](https://garlicoin.io).
+[http://garlicoin.io](http://garlicoin.io).
 
 License
 -------
