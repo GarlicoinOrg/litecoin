@@ -1,8 +1,6 @@
 Garlicoin Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/garlicoin-project/garlicoin.svg?branch=master)](https://travis-ci.org/garlicoin-project/garlicoin)
-
 http://garlicoin.io
 
 What is Garlicoin?
@@ -14,9 +12,7 @@ with no central authority: managing transactions and issuing money are carried
 out collectively by the network. Garlicoin Core is the name of open source
 software which enables the use of this currency.
 
-For more information, as well as an immediately useable, binary version of
-the Garlicoin Core software, see 
-[http://garlicoin.io](http://garlicoin.io).
+For more information, visit [http://garlicoin.io](http://garlicoin.io) and [/r/Garlicoin](https://reddit.com/r/garlicoin).
 
 License
 -------
@@ -34,7 +30,7 @@ regularly to indicate new official, stable release versions of Garlicoin Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Developer Discord can be found [Here](https://discord.gg/Vp4Xz26).
+Garlicoin's developer Discord server can be found [here](https://discord.gg/Vp4Xz26).
 
 Testing
 -------
