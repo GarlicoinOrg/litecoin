@@ -1,7 +1,7 @@
 Garlicoin Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/GarlicoinOrg/garlicoin.svg?branch=master)](https://travis-ci.org/GarlicoinOrg/garlicoin)
+[![Build Status](https://travis-ci.org/GarlicoinOrg/Garlicoin.svg?branch=master)](https://travis-ci.org/GarlicoinOrg/Garlicoin)
 
 http://garlicoin.io
 
