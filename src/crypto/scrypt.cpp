@@ -33,6 +33,7 @@
 #include <stdint.h>
 #include <string.h>
 #include <openssl/sha.h>
+#include <timedata.h>
 
 #if defined(USE_SSE2) && !defined(USE_SSE2_ALWAYS)
 #ifdef _MSC_VER
@@ -255,10 +256,33 @@ static inline void xor_salsa8(uint32_t B[16], const uint32_t Bx[16])
 
 void scrypt_1024_1_1_256_sp_generic(const char *input, char *output, char *scratchpad)
 {
+	// min 10 max 20. this gives N = 2048 and N = 2097152
+	const unsigned char minNfactor = 10;
+	const unsigned char maxNfactor = 20;
+
+	// epoch times of chain start and current block time
+	int64_t nChainStartTime = 1515002093;
+	int64_t nTimestamp = GetAdjustedTime();
+
+	// n-factor will change every this interval is hit
+	int64_t nChangeInterval = 17280000; // 200 days
+
 	uint8_t B[128];
 	uint32_t X[32];
 	uint32_t *V;
-	uint32_t i, j, k;
+	uint32_t i, j, k, N;
+	unsigned char Nfactor;
+
+	// calculate Nfactor
+	if (nTimeStamp <= nChainStartTime) {
+		Nfactor = minNfactor;
+	} else {
+		int64_t s = nTimestamp - nChainStartTime;
+		int n = s/nChangeInterval + 10;
+		if (n < 0) n = 0;
+		unsigned char tempN = (unsigned char) n;
+		Nfactor = min(max(tempN, minNfactor), maxNfactor);
+	}
 
 	V = (uint32_t *)(((uintptr_t)(scratchpad) + 63) & ~ (uintptr_t)(63));
 
@@ -267,13 +291,17 @@ void scrypt_1024_1_1_256_sp_generic(const char *input, char *output, char *scrat
 	for (k = 0; k < 32; k++)
 		X[k] = le32dec(&B[4 * k]);
 
-	for (i = 0; i < 1024; i++) {
+	// assign N
+	N = (1 << (Nfactor + 1));
+
+	for (i = 0; i < N; i++) {
 		memcpy(&V[i * 32], X, 128);
 		xor_salsa8(&X[0], &X[16]);
 		xor_salsa8(&X[16], &X[0]);
 	}
-	for (i = 0; i < 1024; i++) {
-		j = 32 * (X[16] & 1023);
+	for (i = 0; i < N; i++) {
+		// litecoin : j = 32 * (X[16] & 1023);
+		j = 32 * (X[16] & (N-1));
 		for (k = 0; k < 32; k++)
 			X[k] ^= V[j + k];
 		xor_salsa8(&X[0], &X[16]);
