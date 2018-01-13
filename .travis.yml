@@ -100,10 +100,10 @@ script:
   fi
 - if [ "$RUN_TESTS" = "true" ]; then test/functional/test_runner.py --coverage --quiet
   ${extended}; fi
+- tar -zcvf out.tar.gz out
 after_script:
 - echo $TRAVIS_COMMIT_RANGE
 - echo $TRAVIS_COMMIT_LOG
-- tar -zcvf out.tar.gz out
 deploy:
   provider: releases
   skip_cleanup: true
