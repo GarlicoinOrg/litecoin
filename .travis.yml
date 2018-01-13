@@ -100,7 +100,7 @@ script:
   fi
 - if [ "$RUN_TESTS" = "true" ]; then test/functional/test_runner.py --coverage --quiet
   ${extended}; fi
-- tar -zcvf out.tar.gz out
+- cd $TRAVIS_BUILD_DIR && tar -zcvf out.tar.gz out
 after_script:
 - echo $TRAVIS_COMMIT_RANGE
 - echo $TRAVIS_COMMIT_LOG
