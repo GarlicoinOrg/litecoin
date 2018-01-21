@@ -103,7 +103,7 @@ script:
 - if [ "$HOST" = "x86_64-apple-darwin11" ]; then
     cd $TRAVIS_BUILD_DIR/build/ && tar -zcvf "Garlicoin-${HOST}.tar.gz" garlicoin-x86_64-apple-darwin11/dist/;
   else
-    cd $TRAVIS_BUILD_DIR/out/false && tar -zcvf "Garlicoin-${HOST}.tar.gz" *$HOST;
+    cd $TRAVIS_BUILD_DIR/out/$TRAVIS_PULL_REQUEST && tar -zcvf "Garlicoin-${HOST}.tar.gz" *$HOST;
   fi
 after_script:
 - echo $TRAVIS_COMMIT_RANGE
