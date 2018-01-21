@@ -109,7 +109,7 @@ after_script:
 - echo $TRAVIS_COMMIT_RANGE
 - echo $TRAVIS_COMMIT_LOG
 before_deploy:
-- git tag "$(date +'%Y%m%d%H%M%S')|${HOST}"
+- git tag "$(date +'%Y%m%d%H%M%S')-${HOST}"
 deploy:
   provider: releases
   skip_cleanup: true
