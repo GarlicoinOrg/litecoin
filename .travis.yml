@@ -42,7 +42,7 @@ env:
     GOAL="install" BITCOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports
     --enable-sse2" GARLICOIN_SCRYPT=1
   - HOST=x86_64-apple-darwin11 PACKAGES="cmake imagemagick libcap-dev librsvg2-bin
-    libz-dev libbz2-dev libtiff-tools python-dev" BITCOIN_CONFIG="--without-gui --enable-reduce-exports
+    libz-dev libbz2-dev libtiff-tools python-dev" BITCOIN_CONFIG="--enable-gui --enable-reduce-exports
     --enable-sse2" OSX_SDK=10.11 GOAL="deploy"
 before_install:
 - export PATH=$(echo $PATH | tr ':' "\n" | sed '/\/opt\/python/d' | tr "\n" ":" |
@@ -100,10 +100,16 @@ script:
   fi
 - if [ "$RUN_TESTS" = "true" ]; then test/functional/test_runner.py --coverage --quiet
   ${extended}; fi
-- cd $TRAVIS_BUILD_DIR && tar -zcvf "Garlicoin-${HOST}.tar.gz" out
+- if [ "$HOST" = "x86_64-apple-darwin11" ]; then
+    cd $TRAVIS_BUILD_DIR && tar -zcvf "Garlicoin-${HOST}.tar.gz" build/garlicoin-x86_64-apple-darwin11/dist/
+  else
+    cd $TRAVIS_BUILD_DIR && tar -zcvf "Garlicoin-${HOST}.tar.gz" out
+  fi
 after_script:
 - echo $TRAVIS_COMMIT_RANGE
 - echo $TRAVIS_COMMIT_LOG
+before_deploy:
+- git tag "latest"
 deploy:
   provider: releases
   skip_cleanup: true
