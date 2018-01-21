@@ -42,7 +42,7 @@ env:
     GOAL="install" BITCOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports
     --enable-sse2" GARLICOIN_SCRYPT=1
   - HOST=x86_64-apple-darwin11 PACKAGES="cmake imagemagick libcap-dev librsvg2-bin
-    libz-dev libbz2-dev libtiff-tools python-dev" BITCOIN_CONFIG="--enable-gui --enable-reduce-exports
+    libz-dev libbz2-dev libtiff-tools python-dev" BITCOIN_CONFIG="--without-gui --enable-reduce-exports
     --enable-sse2" OSX_SDK=10.11 GOAL="deploy"
 before_install:
 - export PATH=$(echo $PATH | tr ':' "\n" | sed '/\/opt\/python/d' | tr "\n" ":" |
@@ -100,7 +100,7 @@ script:
   fi
 - if [ "$RUN_TESTS" = "true" ]; then test/functional/test_runner.py --coverage --quiet
   ${extended}; fi
-- cd $TRAVIS_BUILD_DIR && tar -zcvf "Garlicoin-${HOST}.tar.gz" ./
+- cd $TRAVIS_BUILD_DIR && tar -zcvf "Garlicoin-${HOST}.tar.gz" out
 after_script:
 - echo $TRAVIS_COMMIT_RANGE
 - echo $TRAVIS_COMMIT_LOG
@@ -111,5 +111,4 @@ deploy:
     secure: O47GLXwVzLfLuYA6EaCHNweKtBvGUk+ro8FpNA3kBHA0jOAWK7DsL64/mWulj2wr3o6f52+bMWifxPLMNMyfPyhslz8XxZ/9HPpowNdrZpmLQ1OZ9If4WK7owD1yj6K4dDXK4mawAJr8PWsD4oEcXeK8rEVRoiCHxiSGUcwzVqwIBCXT7PvmeapJX8TeCYJckT4pIpT0uqclpnuDFf97cAunV3G1MZXZRvrMrsfUS60HFHQFZzBlxTg3mIE5s/6JCxe+R6ZImFV6aNq1b7twMeydKaZPEkljbcmxGg0DJSFpTzggd7ztHUy5Es4PMpNsHBevNb3qMbcvttjsfeRjHpuT8aQqcPlcbOrlaOKE/K+/NalHFBhqdr+CmFFDVhuBIGUDGc47YeihlFOK4+DV18j/fviGKDb2+oHYxUTdsM2YTSmobCDdra3VxNksHzydlnlk7qyQW0S+gNxfzoRHEoAivF+kmD3PRGHyiwDJk7qBXX1Kb4iHdM4F8PnUStuRm4Yh9RERSulcqJmFoYNiBdH0+zy7bYqSvrSWfb9Lm5v7zx50ydcloQQ9uYgzOB73mYy5Z746CM5rbX+9yMYzO8ZpnJ9gBTJkHHxQsyt6OO/1Fh4c5H1nfXCSFqfhNuTE8QKK/chMncGyPOdq1sbdfsqkKAyQAC0zlaoFoSECV+k=
   file: "Garlicoin-${HOST}.tar.gz"
   on:
-    repo: aaruel/Garlicoin,
-    tags: true
+    repo: aaruel/Garlicoin
