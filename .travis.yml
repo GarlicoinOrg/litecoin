@@ -101,9 +101,9 @@ script:
 - if [ "$RUN_TESTS" = "true" ]; then test/functional/test_runner.py --coverage --quiet
   ${extended}; fi
 - if [ "$HOST" = "x86_64-apple-darwin11" ]; then
-    cd $TRAVIS_BUILD_DIR && tar -zcvf "Garlicoin-${HOST}.tar.gz" build/garlicoin-x86_64-apple-darwin11/dist/
+    cd $TRAVIS_BUILD_DIR && tar -zcvf "Garlicoin-${HOST}.tar.gz" build/garlicoin-x86_64-apple-darwin11/dist/;
   else
-    cd $TRAVIS_BUILD_DIR && tar -zcvf "Garlicoin-${HOST}.tar.gz" out
+    cd $TRAVIS_BUILD_DIR && tar -zcvf "Garlicoin-${HOST}.tar.gz" out;
   fi
 after_script:
 - echo $TRAVIS_COMMIT_RANGE
