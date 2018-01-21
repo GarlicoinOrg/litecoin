@@ -103,13 +103,13 @@ script:
 - if [ "$HOST" = "x86_64-apple-darwin11" ]; then
     cd $TRAVIS_BUILD_DIR/build/ && tar -zcvf "Garlicoin-${HOST}.tar.gz" garlicoin-x86_64-apple-darwin11/dist/;
   else
-    cd $TRAVIS_BUILD_DIR/out/false && tar -zcvf "Garlicoin-${HOST}.tar.gz" ./;
+    cd $TRAVIS_BUILD_DIR/out/false && tar -zcvf "Garlicoin-${HOST}.tar.gz" *$HOST;
   fi
 after_script:
 - echo $TRAVIS_COMMIT_RANGE
 - echo $TRAVIS_COMMIT_LOG
 before_deploy:
-- git tag "$(date +'%Y-%m-%d')|${HOST}"
+- git tag "$(date +'%Y%m%d%H%M%S')|${HOST}"
 deploy:
   provider: releases
   skip_cleanup: true
