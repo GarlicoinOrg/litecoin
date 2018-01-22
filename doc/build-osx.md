@@ -29,7 +29,7 @@ Build Garlicoin Core
 
 1. Clone the garlicoin source code and cd into `garlicoin`
 
-        git clone https://github.com/garlicoin-project/garlicoin
+        git clone https://github.com/GarlicoinOrg/Garlicoin
         cd garlicoin
 
 2.  Build garlicoin-core:
