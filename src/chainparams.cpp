@@ -129,6 +129,7 @@ public:
         // Note that of those with the service bits flag, most only support a subset of possible options
         //Put seed nodes here
         vSeeds.emplace_back("dnsseed.brennanmcdonald.io", true);
+        vSeeds.emplace_back("dnsseed.rshaw.space", true);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,38);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
