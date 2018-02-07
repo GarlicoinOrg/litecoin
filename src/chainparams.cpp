@@ -203,7 +203,7 @@ public:
         pchMessageStart[0] = 0xfd;
         pchMessageStart[1] = 0xd2;
         pchMessageStart[2] = 0xc8;
-        pchMessageStart[3] = 0xf1;
+        pchMessageStart[3] = 0xf2;
         nDefaultPort = 42075;
         nPruneAfterHeight = 1000;
 
@@ -220,7 +220,8 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        //vSeeds.emplace_back("dnsseed-testnet.brennanmcdonald.io", true);
+        vSeeds.emplace_back("dnsseed-testnet.brennanmcdonald.io", true);
+        vSeeds.emplace_back("dnsseed-testnet.rshaw.space", false);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
