@@ -271,8 +271,6 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/sha512.h \
   crypto/allium/allium.c \
   crypto/allium/allium.h \
-  crypto/blake2s/blake2s.c \
-  crypto/blake2s/blake2s.h \
   crypto/Lyra2RE/Lyra2RE.c \
   crypto/Lyra2RE/Lyra2RE.h \
   crypto/Lyra2RE/Lyra2.c \
@@ -280,17 +278,11 @@ crypto_libbitcoin_crypto_a_SOURCES = \
   crypto/Lyra2RE/Sponge.c \
   crypto/Lyra2RE/Sponge.h \
   crypto/Lyra2RE/blake.c \
-  crypto/Lyra2RE/blake.h \
   crypto/Lyra2RE/groestl.c \
-  crypto/Lyra2RE/groestl.h \
   crypto/Lyra2RE/keccak.c \
-  crypto/Lyra2RE/keccak.h \
   crypto/Lyra2RE/skein.c \
-  crypto/Lyra2RE/skein.h \
   crypto/Lyra2RE/cubehash.c \
-  crypto/Lyra2RE/cubehash.h \
-  crypto/Lyra2RE/bmw.c \
-  crypto/Lyra2RE/bmw.h
+  crypto/Lyra2RE/bmw.c
 
 if EXPERIMENTAL_ASM
 crypto_libbitcoin_crypto_a_SOURCES += crypto/sha256_sse4.cpp
