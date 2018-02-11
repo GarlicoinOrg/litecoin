@@ -38,22 +38,22 @@
 #include "crypto/Lyra2RE/sph_cubehash.h"
 #include "crypto/Lyra2RE/Lyra2.h"
 
-#define CL_N    "\x1B[0m"
-#define CL_CYN  "\x1B[36m"
+// #define CL_N    "\x1B[0m"
+// #define CL_CYN  "\x1B[36m"
 
 
-#define printpfx(n,h) \
-	printf("%s%11s%s: %s\n", CL_CYN, n, CL_N, format_hash(s, (uint8_t*) h))
+// #define printpfx(n,h) \
+// 	printf("%s%11s%s: %s\n", CL_CYN, n, CL_N, format_hash(s, (uint8_t*) h))
 
-static char* format_hash(char* buf, uint8_t *hash)
-{
-	int len = 0;
-	for (int i=0; i < 32; i += 4) {
-		len += sprintf(buf+len, "%02x%02x%02x%02x ",
-			hash[i], hash[i+1], hash[i+2], hash[i+3]);
-	}
-	return buf;
-}
+// static char* format_hash(char* buf, uint8_t *hash)
+// {
+// 	int len = 0;
+// 	for (int i=0; i < 32; i += 4) {
+// 		len += sprintf(buf+len, "%02x%02x%02x%02x ",
+// 			hash[i], hash[i+1], hash[i+2], hash[i+3]);
+// 	}
+// 	return buf;
+// }
 
 void allium_hash(const char* input, char* state)
 {
