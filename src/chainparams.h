@@ -58,6 +58,12 @@ public:
         MAX_BASE58_TYPES
     };
 
+    enum Constants
+    {
+        ALGO_ALLIUM = 10,
+        ALGO_SCRYPT = 20
+    };    
+
     const Consensus::Params& GetConsensus() const { return consensus; }
     const CMessageHeader::MessageStartChars& MessageStart() const { return pchMessageStart; }
     int GetDefaultPort() const { return nDefaultPort; }
@@ -78,15 +84,11 @@ public:
     const CCheckpointData& Checkpoints() const { return checkpointData; }
     const ChainTxData& TxData() const { return chainTxData; }
     void UpdateVersionBitsParameters(Consensus::DeploymentPos d, int64_t nStartTime, int64_t nTimeout);
-    int SwitchAllium(int nHeight) const {
-        if (strNetworkID == CBaseChainParams::TESTNET){
-            if(nHeight > 10){
-                return 1;
-            } else {
-              return 0;
-            }
+    int GetPoWAlgo(int nHeight) const {
+        if (strNetworkID == CBaseChainParams::TESTNET && nHeight > 10){
+                return ALGO_ALLIUM ;
         } else {
-            return 0;
+            return ALGO_SCRYPT;
         }
     }
 protected:

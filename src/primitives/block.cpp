@@ -20,13 +20,12 @@ uint256 CBlockHeader::GetHash() const
 
 uint256 CBlockHeader::GetPoWHash(int nAlgo) const
 {
-    // printf("%d", nAlgo);
     uint256 thash;
     switch(nAlgo){
-        case 0:
+        case CChainParams::ALGO_SCRYPT :
             scrypt_N_1_1_256(BEGIN(nVersion), BEGIN(thash), 10);
             break;
-        case 1:
+        case CChainParams::ALGO_ALLIUM :
             allium_hash(BEGIN(nVersion), BEGIN(thash));
             break;
     }
