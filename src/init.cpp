@@ -526,7 +526,7 @@ std::string HelpMessage(HelpMessageMode mode)
 std::string LicenseInfo()
 {
     const std::string URL_SOURCE_CODE = "<https://github.com/garlicoin-project/garlicoin>";
-    const std::string URL_WEBSITE = "<https://garlicoin.org>";
+    const std::string URL_WEBSITE = "<https://garlicoin.io>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2011, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +

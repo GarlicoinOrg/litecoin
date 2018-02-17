@@ -49,7 +49,7 @@ static const int MAX_URI_LENGTH = 255;
 #define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "Garlicoin"
-#define QAPP_ORG_DOMAIN "garlicoin.org"
+#define QAPP_ORG_DOMAIN "garlicoin.io"
 #define QAPP_APP_NAME_DEFAULT "Garlicoin-Qt"
 #define QAPP_APP_NAME_TESTNET "Garlicoin-Qt-testnet"
 

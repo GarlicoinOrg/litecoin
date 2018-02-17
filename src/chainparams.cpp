@@ -128,8 +128,9 @@ public:
 
         // Note that of those with the service bits flag, most only support a subset of possible options
         //Put seed nodes here
-        vSeeds.emplace_back("dnsseed.brennanmcdonald.io", true);
+        //vSeeds.emplace_back("dnsseed.brennanmcdonald.io", true);
         vSeeds.emplace_back("dnsseed.rshaw.space", true);
+        vSeeds.emplace_back("dnsseed.garli.co.in", true);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,38);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
@@ -147,6 +148,7 @@ public:
         checkpointData = (CCheckpointData) {
             {
                 {  0, uint256S("0x2ada80bf415a89358d697569c96eb98cdbf4c3b8878ac5722c01284492e27228")},
+                {  10000, uint256S("0xe3d63206131fbdc8e60be5625d3bf9168a8b0ebeb04332e39e9ff8f0c541eaf4")},
             }
         };
 
@@ -202,7 +204,7 @@ public:
         pchMessageStart[0] = 0xfd;
         pchMessageStart[1] = 0xd2;
         pchMessageStart[2] = 0xc8;
-        pchMessageStart[3] = 0xf1;
+        pchMessageStart[3] = 0xf2;
         nDefaultPort = 42075;
         nPruneAfterHeight = 1000;
 
@@ -220,6 +222,7 @@ public:
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
         //vSeeds.emplace_back("dnsseed-testnet.brennanmcdonald.io", true);
+        vSeeds.emplace_back("dnsseed-testnet.rshaw.space", false);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,111);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
