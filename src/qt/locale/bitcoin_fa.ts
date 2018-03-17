@@ -62,7 +62,7 @@
         <translation>آدرس های گیرنده</translation>
     </message>
     <message>
-        <source>These are your Garlicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Honeycomb addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>اینها آدرس های شما برای فرستادن پرداخت هاست. همیشه قبل از فرستادن سکه ها مقدار و آدرس دریافت کننده را چک کنید.</translation>
     </message>
     <message>
@@ -298,8 +298,8 @@
         <translation>بازنشانی بلوک‌ها روی دیسک...</translation>
     </message>
     <message>
-        <source>Send coins to a Garlicoin address</source>
-        <translation>ارسال وجه به نشانی Garlicoin</translation>
+        <source>Send coins to a Honeycomb address</source>
+        <translation>ارسال وجه به نشانی Honeycomb</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -322,8 +322,8 @@
         <translation>با&amp;زبینی پیام...</translation>
     </message>
     <message>
-        <source>Garlicoin</source>
-        <translation>Garlicoin</translation>
+        <source>Honeycomb</source>
+        <translation>Honeycomb</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -350,12 +350,12 @@
         <translation>رمزنگاری کلیدهای خصوصی متعلق به کیف پول شما</translation>
     </message>
     <message>
-        <source>Sign messages with your Garlicoin addresses to prove you own them</source>
-        <translation>برای اثبات اینکه پیام‌ها به شما تعلق دارند، آن‌ها را با نشانی Garlicoin خود امضا کنید</translation>
+        <source>Sign messages with your Honeycomb addresses to prove you own them</source>
+        <translation>برای اثبات اینکه پیام‌ها به شما تعلق دارند، آن‌ها را با نشانی Honeycomb خود امضا کنید</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Garlicoin addresses</source>
-        <translation>برای حصول اطمینان از اینکه پیام با نشانی Garlicoin مشخص شده امضا است یا خیر، پیام را شناسایی کنید</translation>
+        <source>Verify messages to ensure they were signed with specified Honeycomb addresses</source>
+        <translation>برای حصول اطمینان از اینکه پیام با نشانی Honeycomb مشخص شده امضا است یا خیر، پیام را شناسایی کنید</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -374,8 +374,8 @@
         <translation>نوارابزار برگه‌ها</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and garlicoin: URIs)</source>
-        <translation>درخواست پرداخت ( تولید کد کیوار و ادرس garlicoin)</translation>
+        <source>Request payments (generates QR codes and honeycomb: URIs)</source>
+        <translation>درخواست پرداخت ( تولید کد کیوار و ادرس honeycomb)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -386,16 +386,16 @@
         <translation>نمایش لیست آدرس های دریافت و لیبل ها</translation>
     </message>
     <message>
-        <source>Open a garlicoin: URI or payment request</source>
-        <translation>بازکردن یک garlicoin: آدرس یا درخواست پرداخت</translation>
+        <source>Open a honeycomb: URI or payment request</source>
+        <translation>بازکردن یک honeycomb: آدرس یا درخواست پرداخت</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>گزینه‌های خط‌فرمان</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Garlicoin network</source>
-        <translation><numerusform>%n ارتباط فعال با شبکهٔ Garlicoin</numerusform></translation>
+        <source>%n active connection(s) to Honeycomb network</source>
+        <translation><numerusform>%n ارتباط فعال با شبکهٔ Honeycomb</numerusform></translation>
     </message>
     <message>
         <source>Processing blocks on disk...</source>
@@ -642,8 +642,8 @@
         <translation>ویرایش آدرس قرستنده</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Garlicoin address.</source>
-        <translation>نشانی وارد شده "%1" یک نشانی معتبر Garlicoin نیست.</translation>
+        <source>The entered address "%1" is not a valid Honeycomb address.</source>
+        <translation>نشانی وارد شده "%1" یک نشانی معتبر Honeycomb نیست.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -852,8 +852,8 @@
         <translation>استخراج</translation>
     </message>
     <message>
-        <source>Automatically open the Garlicoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>باز کردن خودکار درگاه شبکهٔ Garlicoin روی روترها. تنها زمانی کار می‌کند که روتر از پروتکل UPnP پشتیبانی کند و این پروتکل فعال باشد.</translation>
+        <source>Automatically open the Honeycomb client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>باز کردن خودکار درگاه شبکهٔ Honeycomb روی روترها. تنها زمانی کار می‌کند که روتر از پروتکل UPnP پشتیبانی کند و این پروتکل فعال باشد.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -951,8 +951,8 @@
         <translation>فرم</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Garlicoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>اطلاعات نمایش‌داده شده ممکن است قدیمی باشند. بعد از این که یک اتصال با شبکه برقرار شد، کیف پول شما به‌صورت خودکار با شبکهٔ Garlicoin همگام‌سازی می‌شود. اما این روند هنوز کامل نشده است.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Honeycomb network after a connection is established, but this process has not completed yet.</source>
+        <translation>اطلاعات نمایش‌داده شده ممکن است قدیمی باشند. بعد از این که یک اتصال با شبکه برقرار شد، کیف پول شما به‌صورت خودکار با شبکهٔ Honeycomb همگام‌سازی می‌شود. اما این روند هنوز کامل نشده است.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1016,8 +1016,8 @@
         <translation>مبلغ</translation>
     </message>
     <message>
-        <source>Enter a Garlicoin address (e.g. %1)</source>
-        <translation>یک آدرس Garlicoin وارد کنید (مثلاً %1)</translation>
+        <source>Enter a Honeycomb address (e.g. %1)</source>
+        <translation>یک آدرس Honeycomb وارد کنید (مثلاً %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1476,8 +1476,8 @@
         <translation>این یک پرداخت عادی است</translation>
     </message>
     <message>
-        <source>The Garlicoin address to send the payment to</source>
-        <translation>نشانی Garlicoin برای ارسال پرداخت به آن</translation>
+        <source>The Honeycomb address to send the payment to</source>
+        <translation>نشانی Honeycomb برای ارسال پرداخت به آن</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1529,8 +1529,8 @@
         <translation>ا&amp;مضای پیام</translation>
     </message>
     <message>
-        <source>The Garlicoin address to sign the message with</source>
-        <translation>نشانی Garlicoin برای امضاء پیغام با آن</translation>
+        <source>The Honeycomb address to sign the message with</source>
+        <translation>نشانی Honeycomb برای امضاء پیغام با آن</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1561,7 +1561,7 @@
         <translation>امضای فعلی را به حافظهٔ سیستم کپی کن</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Garlicoin address</source>
+        <source>Sign the message to prove you own this Honeycomb address</source>
         <translation>برای اثبات تعلق این نشانی به شما، پیام را امضا کنید</translation>
     </message>
     <message>
@@ -1581,12 +1581,12 @@
         <translation>&amp;شناسایی پیام</translation>
     </message>
     <message>
-        <source>The Garlicoin address the message was signed with</source>
-        <translation>نشانی Garlicoin که پیغام با آن امضاء شده</translation>
+        <source>The Honeycomb address the message was signed with</source>
+        <translation>نشانی Honeycomb که پیغام با آن امضاء شده</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Garlicoin address</source>
-        <translation>برای حصول اطمینان از اینکه پیام با نشانی Garlicoin مشخص شده امضا است یا خیر، پیام را شناسایی کنید</translation>
+        <source>Verify the message to ensure it was signed with the specified Honeycomb address</source>
+        <translation>برای حصول اطمینان از اینکه پیام با نشانی Honeycomb مشخص شده امضا است یا خیر، پیام را شناسایی کنید</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1702,8 +1702,8 @@
         <translation>اجرا در پشت زمینه به‌صورت یک سرویس و پذیرش دستورات</translation>
     </message>
     <message>
-        <source>Garlicoin Core</source>
-        <translation> هسته Garlicoin </translation>
+        <source>Honeycomb Core</source>
+        <translation> هسته Honeycomb </translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

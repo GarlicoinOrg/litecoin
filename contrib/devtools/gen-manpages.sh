@@ -4,10 +4,10 @@ TOPDIR=${TOPDIR:-$(git rev-parse --show-toplevel)}
 SRCDIR=${SRCDIR:-$TOPDIR/src}
 MANDIR=${MANDIR:-$TOPDIR/doc/man}
 
-BITCOIND=${BITCOIND:-$SRCDIR/garlicoind}
-BITCOINCLI=${BITCOINCLI:-$SRCDIR/garlicoin-cli}
-BITCOINTX=${BITCOINTX:-$SRCDIR/garlicoin-tx}
-BITCOINQT=${BITCOINQT:-$SRCDIR/qt/garlicoin-qt}
+BITCOIND=${BITCOIND:-$SRCDIR/honeycombd}
+BITCOINCLI=${BITCOINCLI:-$SRCDIR/honeycomb-cli}
+BITCOINTX=${BITCOINTX:-$SRCDIR/honeycomb-tx}
+BITCOINQT=${BITCOINQT:-$SRCDIR/qt/honeycomb-qt}
 
 [ ! -x $BITCOIND ] && echo "$GARLICOIND not found or not executable." && exit 1
 

@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Garlicoin-Qt</string>
+  <string>Honeycomb-Qt</string>
   
   <key>CFBundleName</key>
-  <string>Garlicoin-Qt</string>
+  <string>Honeycomb-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.garlicoin.Garlicoin-Qt</string>
+  <string>org.honeycomb.Honeycomb-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.garlicoin.GarlicoinPayment</string>
+      <string>org.honeycomb.HoneycombPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>garlicoin</string>
+        <string>honeycomb</string>
       </array>
     </dict>
   </array>
@@ -58,9 +58,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>org.garlicoin.paymentrequest</string>
+      <string>org.honeycomb.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Garlicoin payment request</string>
+      <string>Honeycomb payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-garlicoin-payment-request</string>
+        <string>application/x-honeycomb-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>garlicoinpaymentrequest</string>
+          <string>honeycombpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>org.garlicoin.paymentrequest</string>
+        <string>org.honeycomb.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

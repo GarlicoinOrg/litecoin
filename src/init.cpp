@@ -525,8 +525,8 @@ std::string HelpMessage(HelpMessageMode mode)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/garlicoin-project/garlicoin>";
-    const std::string URL_WEBSITE = "<https://garlicoin.io>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/honeycomb-project/honeycomb>";
+    const std::string URL_WEBSITE = "<https://honeycomb.io>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2011, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
@@ -815,7 +815,7 @@ void InitLogging()
     fLogIPs = gArgs.GetBoolArg("-logips", DEFAULT_LOGIPS);
 
     LogPrintf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    LogPrintf("Garlicoin version %s\n", FormatFullVersion());
+    LogPrintf("Honeycomb version %s\n", FormatFullVersion());
 }
 
 namespace { // Variables internal to initialization process only

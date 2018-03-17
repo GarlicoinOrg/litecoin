@@ -54,8 +54,8 @@
         <translation>&amp;Odaberi</translation>
     </message>
     <message>
-        <source>These are your Garlicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Ovo su vaše Garlicoin adrese za slanje novca. Uvijek provjerite iznos i adresu primatelja prije slanja novca.</translation>
+        <source>These are your Honeycomb addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Ovo su vaše Honeycomb adrese za slanje novca. Uvijek provjerite iznos i adresu primatelja prije slanja novca.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -174,8 +174,8 @@
         <translation>Re-indeksiranje blokova na disku...</translation>
     </message>
     <message>
-        <source>Send coins to a Garlicoin address</source>
-        <translation>Slanje novca na garlicoin adresu</translation>
+        <source>Send coins to a Honeycomb address</source>
+        <translation>Slanje novca na honeycomb adresu</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -198,8 +198,8 @@
         <translation>&amp;Potvrdite poruku...</translation>
     </message>
     <message>
-        <source>Garlicoin</source>
-        <translation>Garlicoin</translation>
+        <source>Honeycomb</source>
+        <translation>Honeycomb</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -226,12 +226,12 @@
         <translation>Šifriranje privatnih ključeva koji u novčaniku</translation>
     </message>
     <message>
-        <source>Sign messages with your Garlicoin addresses to prove you own them</source>
-        <translation>Poruku potpišemo s garlicoin adresom, kako bi dokazali vlasništvo nad tom adresom</translation>
+        <source>Sign messages with your Honeycomb addresses to prove you own them</source>
+        <translation>Poruku potpišemo s honeycomb adresom, kako bi dokazali vlasništvo nad tom adresom</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Garlicoin addresses</source>
-        <translation>Provjeravanje poruke, kao dokaz, da je potpisana navedenom garlicoin adresom</translation>
+        <source>Verify messages to ensure they were signed with specified Honeycomb addresses</source>
+        <translation>Provjeravanje poruke, kao dokaz, da je potpisana navedenom honeycomb adresom</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -250,8 +250,8 @@
         <translation>Traka kartica</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and garlicoin: URIs)</source>
-        <translation>Zatraži uplatu (stvara QR kod i garlicoin: URI adresu)</translation>
+        <source>Request payments (generates QR codes and honeycomb: URIs)</source>
+        <translation>Zatraži uplatu (stvara QR kod i honeycomb: URI adresu)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -262,16 +262,16 @@
         <translation>Prikaži popis korištenih adresa i oznaka za primanje novca</translation>
     </message>
     <message>
-        <source>Open a garlicoin: URI or payment request</source>
-        <translation>Otvori garlicoin: URI adresu ili zahtjev za uplatu</translation>
+        <source>Open a honeycomb: URI or payment request</source>
+        <translation>Otvori honeycomb: URI adresu ili zahtjev za uplatu</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Opcije &amp;naredbene linije</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Garlicoin network</source>
-        <translation><numerusform>%n aktivna veza na Garlicoin mrežu</numerusform><numerusform>%n aktivnih veza na Garlicoin mrežu</numerusform><numerusform>%n aktivnih veza na Garlicoin mrežu</numerusform></translation>
+        <source>%n active connection(s) to Honeycomb network</source>
+        <translation><numerusform>%n aktivna veza na Honeycomb mrežu</numerusform><numerusform>%n aktivnih veza na Honeycomb mrežu</numerusform><numerusform>%n aktivnih veza na Honeycomb mrežu</numerusform></translation>
     </message>
     <message numerus="yes">
         <source>Processed %n block(s) of transaction history.</source>
@@ -423,11 +423,11 @@
     </message>
     <message>
         <source>The label associated with this address list entry</source>
-        <translation>Oznaka garlicoin adrese</translation>
+        <translation>Oznaka honeycomb adrese</translation>
     </message>
     <message>
         <source>The address associated with this address list entry. This can only be modified for sending addresses.</source>
-        <translation>Garlicoin adresa. Izmjene adrese su moguće samo za adrese za slanje.</translation>
+        <translation>Honeycomb adresa. Izmjene adrese su moguće samo za adrese za slanje.</translation>
     </message>
     <message>
         <source>&amp;Address</source>
@@ -568,8 +568,8 @@
         <translation>&amp;Trošenje nepotvrđenih vraćenih iznosa</translation>
     </message>
     <message>
-        <source>Automatically open the Garlicoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatski otvori port Garlicoin klijenta na ruteru. To radi samo ako ruter podržava UPnP i ako je omogućen.</translation>
+        <source>Automatically open the Honeycomb client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatski otvori port Honeycomb klijenta na ruteru. To radi samo ako ruter podržava UPnP i ako je omogućen.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -617,7 +617,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Izaberite željeni najmanji dio garlicoina koji će biti prikazan u sučelju i koji će se koristiti za plaćanje.</translation>
+        <translation>Izaberite željeni najmanji dio honeycomba koji će biti prikazan u sučelju i koji će se koristiti za plaćanje.</translation>
     </message>
     <message>
         <source>&amp;OK</source>
@@ -643,8 +643,8 @@
         <translation>Oblik</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Garlicoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Prikazani podatci mogu biti zastarjeli. Vaš novčanik se automatski sinkronizira s Garlicoin mrežom kada je veza uspostavljena, ali taj proces još nije završen.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Honeycomb network after a connection is established, but this process has not completed yet.</source>
+        <translation>Prikazani podatci mogu biti zastarjeli. Vaš novčanik se automatski sinkronizira s Honeycomb mrežom kada je veza uspostavljena, ali taj proces još nije završen.</translation>
     </message>
     <message>
         <source>Total:</source>
@@ -1034,8 +1034,8 @@
         <translation>Izvršavaj u pozadini kao uslužnik i prihvaćaj komande</translation>
     </message>
     <message>
-        <source>Garlicoin Core</source>
-        <translation>Garlicoin Core</translation>
+        <source>Honeycomb Core</source>
+        <translation>Honeycomb Core</translation>
     </message>
     <message>
         <source>Block creation options:</source>

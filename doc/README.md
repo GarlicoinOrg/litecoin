@@ -1,41 +1,41 @@
-Garlicoin Core
+Honeycomb Core
 =============
 
 Setup
 ---------------------
-Garlicoin Core is the original Garlicoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Garlicoin transactions (which is currently more than 7 GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+Honeycomb Core is the original Honeycomb client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Honeycomb transactions (which is currently more than 7 GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Garlicoin Core, visit [garlicoin.io](https://garlicoin.io).
+To download Honeycomb Core, visit [honeycomb.io](https://honeycomb.io).
 
 Running
 ---------------------
-The following are some helpful notes on how to run Garlicoin on your native platform.
+The following are some helpful notes on how to run Honeycomb on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- `bin/garlicoin-qt` (GUI) or
-- `bin/garlicoind` (headless)
+- `bin/honeycomb-qt` (GUI) or
+- `bin/honeycombd` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run garlicoin-qt.exe.
+Unpack the files into a directory, and then run honeycomb-qt.exe.
 
 ### OS X
 
-Drag Garlicoin-Core to your applications folder, and then run Garlicoin-Core.
+Drag Honeycomb-Core to your applications folder, and then run Honeycomb-Core.
 
 ### Need Help?
 
-* See the documentation at the [Garlicoin Wiki](https://garlicoin.info/)
+* See the documentation at the [Honeycomb Wiki](https://honeycomb.info/)
 for help and more information.
-* Ask for help on [#garlicoin](http://webchat.freenode.net?channels=garlicoin) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=garlicoin).
-* Ask for help on the [GarlicoinTalk](https://garlicointalk.io/) forums.
+* Ask for help on [#honeycomb](http://webchat.freenode.net?channels=honeycomb) on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net?channels=honeycomb).
+* Ask for help on the [HoneycombTalk](https://honeycombtalk.io/) forums.
 
 Building
 ---------------------
-The following are developer notes on how to build Garlicoin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Honeycomb on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OS X Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -45,12 +45,12 @@ The following are developer notes on how to build Garlicoin on your native platf
 
 Development
 ---------------------
-The Garlicoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The Honeycomb repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Release Notes](release-notes.md)
 - [Release Process](release-process.md)
-- [Source Code Documentation (External Link)](https://dev.visucore.com/garlicoin/doxygen/)
+- [Source Code Documentation (External Link)](https://dev.visucore.com/honeycomb/doxygen/)
 - [Translation Process](translation_process.md)
 - [Translation Strings Policy](translation_strings_policy.md)
 - [Travis CI](travis-ci.md)
@@ -61,8 +61,8 @@ The Garlicoin repo's [root README](/README.md) contains relevant information on 
 - [Benchmarking](benchmarking.md)
 
 ### Resources
-* Discuss on the [GarlicoinTalk](https://garlicointalk.io/) forums.
-* Discuss general Garlicoin development on #garlicoin-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=garlicoin-dev).
+* Discuss on the [HoneycombTalk](https://honeycombtalk.io/) forums.
+* Discuss general Honeycomb development on #honeycomb-dev on Freenode. If you don't have an IRC client use [webchat here](http://webchat.freenode.net/?channels=honeycomb-dev).
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

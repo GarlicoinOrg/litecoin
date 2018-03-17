@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.garlicoin.Garlicoin-Qt";
+        return @"org.honeycomb.Honeycomb-Qt";
     } else {
         return [self __bundleIdentifier];
     }

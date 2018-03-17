@@ -62,12 +62,12 @@
         <translation>Alamat-alamat penerima</translation>
     </message>
     <message>
-        <source>These are your Garlicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Ini adalah alamat- alamat Garlicoin Anda untuk mengirimkan pembayaran. Selalu periksa jumlah dan alamat penerima sebelum mengirimkan koin.</translation>
+        <source>These are your Honeycomb addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Ini adalah alamat- alamat Honeycomb Anda untuk mengirimkan pembayaran. Selalu periksa jumlah dan alamat penerima sebelum mengirimkan koin.</translation>
     </message>
     <message>
-        <source>These are your Garlicoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Ini adalah alamat- alamat Garlicoin Anda untuk menerima pembayaran. Dianjurkan untuk menggunakan alamat penerima yang baru setiap melakukan transaksi.</translation>
+        <source>These are your Honeycomb addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Ini adalah alamat- alamat Honeycomb Anda untuk menerima pembayaran. Dianjurkan untuk menggunakan alamat penerima yang baru setiap melakukan transaksi.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,7 +176,7 @@
         <translation>Dompet terenkripsi</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your garlicoins from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your honeycombs from being stolen by malware infecting your computer.</source>
         <translation>%1 sekarang akan ditutup untuk menyelesaikan proses enkripsi. Ingatlah bahwa mengenkripsi dompet Anda tidak dapat sepenuhnya melindungi komputer Anda dari pencurian malware yang menginfeksi komputer Anda.</translation>
     </message>
     <message>
@@ -334,8 +334,8 @@
         <translation>Mengindex ulang blok di dalam disk...</translation>
     </message>
     <message>
-        <source>Send coins to a Garlicoin address</source>
-        <translation>Kirim koin ke alamat Garlicoin</translation>
+        <source>Send coins to a Honeycomb address</source>
+        <translation>Kirim koin ke alamat Honeycomb</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -358,8 +358,8 @@
         <translation>&amp;Verifikasi pesan...</translation>
     </message>
     <message>
-        <source>Garlicoin</source>
-        <translation>Garlicoin</translation>
+        <source>Honeycomb</source>
+        <translation>Honeycomb</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -386,12 +386,12 @@
         <translation>Enkripsi private key yang dimiliki dompet Anda</translation>
     </message>
     <message>
-        <source>Sign messages with your Garlicoin addresses to prove you own them</source>
-        <translation>Tanda tangani sebuah pesan menggunakan alamat Garlicoin Anda untuk membuktikan bahwa Anda adalah pemilik alamat tersebut</translation>
+        <source>Sign messages with your Honeycomb addresses to prove you own them</source>
+        <translation>Tanda tangani sebuah pesan menggunakan alamat Honeycomb Anda untuk membuktikan bahwa Anda adalah pemilik alamat tersebut</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Garlicoin addresses</source>
-        <translation>Verifikasi pesan untuk memastikan bahwa pesan tersebut ditanda tangani oleh suatu alamat Garlicoin tertentu</translation>
+        <source>Verify messages to ensure they were signed with specified Honeycomb addresses</source>
+        <translation>Verifikasi pesan untuk memastikan bahwa pesan tersebut ditanda tangani oleh suatu alamat Honeycomb tertentu</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -410,8 +410,8 @@
         <translation>Baris tab</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and garlicoin: URIs)</source>
-        <translation>Permintaan pembayaran (membuat kode QR dan garlicoin: URIs)</translation>
+        <source>Request payments (generates QR codes and honeycomb: URIs)</source>
+        <translation>Permintaan pembayaran (membuat kode QR dan honeycomb: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -422,16 +422,16 @@
         <translation>Tampilkan daftar alamat dan label yang diterima</translation>
     </message>
     <message>
-        <source>Open a garlicoin: URI or payment request</source>
-        <translation>Buka URI garlicoin: atau permintaan pembayaran</translation>
+        <source>Open a honeycomb: URI or payment request</source>
+        <translation>Buka URI honeycomb: atau permintaan pembayaran</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;pilihan Command-line</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Garlicoin network</source>
-        <translation><numerusform>%n koneksi aktif ke jaringan Garlicoin</numerusform></translation>
+        <source>%n active connection(s) to Honeycomb network</source>
+        <translation><numerusform>%n koneksi aktif ke jaringan Honeycomb</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -474,8 +474,8 @@
         <translation>Terbaru</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Garlicoin command-line options</source>
-        <translation>Tampilkan %1 pesan bantuan untuk mendapatkan daftar opsi baris perintah Garlicoin yang memungkinkan</translation>
+        <source>Show the %1 help message to get a list with possible Honeycomb command-line options</source>
+        <translation>Tampilkan %1 pesan bantuan untuk mendapatkan daftar opsi baris perintah Honeycomb yang memungkinkan</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -544,8 +544,8 @@
         <translation>Dompet saat ini &lt;b&gt;terenkripsi&lt;/b&gt; dan &lt;b&gt;terkunci&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Garlicoin can no longer continue safely and will quit.</source>
-        <translation>Terjadi Kesalahan Fatal. Garlicoin Tidak Dapat Melanjutkan Dengan Aman Dan Akan Keluar</translation>
+        <source>A fatal error occurred. Honeycomb can no longer continue safely and will quit.</source>
+        <translation>Terjadi Kesalahan Fatal. Honeycomb Tidak Dapat Melanjutkan Dengan Aman Dan Akan Keluar</translation>
     </message>
 </context>
 <context>
@@ -722,8 +722,8 @@
         <translation>Ubah alamat pengirim</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Garlicoin address.</source>
-        <translation>Alamat yang dimasukkan "%1" bukanlah alamat Garlicoin yang valid.</translation>
+        <source>The entered address "%1" is not a valid Honeycomb address.</source>
+        <translation>Alamat yang dimasukkan "%1" bukanlah alamat Honeycomb yang valid.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -972,16 +972,16 @@
         <translation>&amp;Perubahan saldo untuk transaksi yang belum dikonfirmasi</translation>
     </message>
     <message>
-        <source>Automatically open the Garlicoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Otomatis membuka port client Garlicoin di router. Hanya berjalan apabila router anda mendukung UPnP dan di-enable.</translation>
+        <source>Automatically open the Honeycomb client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Otomatis membuka port client Honeycomb di router. Hanya berjalan apabila router anda mendukung UPnP dan di-enable.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Petakan port dengan &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Garlicoin network through a SOCKS5 proxy.</source>
-        <translation>Hubungkan ke jaringan Garlicoin melalui SOCKS5 proxy.</translation>
+        <source>Connect to the Honeycomb network through a SOCKS5 proxy.</source>
+        <translation>Hubungkan ke jaringan Honeycomb melalui SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1087,8 +1087,8 @@
         <translation>Formulir</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Garlicoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Informasi terlampir mungkin sudah kedaluwarsa. Dompet Anda secara otomatis mensinkronisasi dengan jaringan Garlicoin ketika sebuah hubungan terbentuk, namun proses ini belum selesai.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Honeycomb network after a connection is established, but this process has not completed yet.</source>
+        <translation>Informasi terlampir mungkin sudah kedaluwarsa. Dompet Anda secara otomatis mensinkronisasi dengan jaringan Honeycomb ketika sebuah hubungan terbentuk, namun proses ini belum selesai.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1144,8 +1144,8 @@
         <translation>Nilai</translation>
     </message>
     <message>
-        <source>Enter a Garlicoin address (e.g. %1)</source>
-        <translation>Masukkan alamat Garlicoin (contoh %1)</translation>
+        <source>Enter a Honeycomb address (e.g. %1)</source>
+        <translation>Masukkan alamat Honeycomb (contoh %1)</translation>
     </message>
     <message>
         <source>%1 h</source>
@@ -1679,8 +1679,8 @@
         <translation>Salin tanda tangan terpilih ke sistem klipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Garlicoin address</source>
-        <translation>Tandai pesan untuk menyetujui kamu pemiliki alamat Garlicoin ini</translation>
+        <source>Sign the message to prove you own this Honeycomb address</source>
+        <translation>Tandai pesan untuk menyetujui kamu pemiliki alamat Honeycomb ini</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1820,8 +1820,8 @@
         <translation>Berjalan dibelakang sebagai daemin dan menerima perintah</translation>
     </message>
     <message>
-        <source>Garlicoin Core</source>
-        <translation>Garlicoin Core</translation>
+        <source>Honeycomb Core</source>
+        <translation>Honeycomb Core</translation>
     </message>
     <message>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>

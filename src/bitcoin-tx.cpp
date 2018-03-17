@@ -54,10 +54,10 @@ static int AppInitRawTx(int argc, char* argv[])
     if (argc<2 || gArgs.IsArgSet("-?") || gArgs.IsArgSet("-h") || gArgs.IsArgSet("-help"))
     {
         // First part of help message is specific to this utility
-        std::string strUsage = strprintf(_("%s garlicoin-tx utility version"), _(PACKAGE_NAME)) + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = strprintf(_("%s honeycomb-tx utility version"), _(PACKAGE_NAME)) + " " + FormatFullVersion() + "\n\n" +
             _("Usage:") + "\n" +
-              "  garlicoin-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded garlicoin transaction") + "\n" +
-              "  garlicoin-tx [options] -create [commands]   " + _("Create hex-encoded garlicoin transaction") + "\n" +
+              "  honeycomb-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded honeycomb transaction") + "\n" +
+              "  honeycomb-tx [options] -create [commands]   " + _("Create hex-encoded honeycomb transaction") + "\n" +
               "\n";
 
         fprintf(stdout, "%s", strUsage.c_str());

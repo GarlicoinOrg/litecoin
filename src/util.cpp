@@ -87,8 +87,8 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char * const BITCOIN_CONF_FILENAME = "garlicoin.conf";
-const char * const BITCOIN_PID_FILENAME = "garlicoin.pid";
+const char * const BITCOIN_CONF_FILENAME = "honeycomb.conf";
+const char * const BITCOIN_PID_FILENAME = "honeycomb.pid";
 
 ArgsManager gArgs;
 bool fPrintToConsole = false;
@@ -505,7 +505,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(nullptr, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "garlicoin";
+    const char* pszModule = "honeycomb";
 #endif
     if (pex)
         return strprintf(
@@ -530,7 +530,7 @@ fs::path GetDefaultDataDir()
     // Unix: ~/.bitcoin
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Garlicoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Honeycomb";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -540,10 +540,10 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/Garlicoin";
+    return pathRet / "Library/Application Support/Honeycomb";
 #else
     // Unix
-    return pathRet / ".garlicoin";
+    return pathRet / ".honeycomb";
 #endif
 #endif
 }

@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Garlicoin"
-            VALUE "FileDescription",    "garlicoin-tx (CLI Garlicoin transaction editor utility)"
+            VALUE "CompanyName",        "Honeycomb"
+            VALUE "FileDescription",    "honeycomb-tx (CLI Honeycomb transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "garlicoin-tx"
+            VALUE "InternalName",       "honeycomb-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "garlicoin-tx.exe"
-            VALUE "ProductName",        "garlicoin-tx"
+            VALUE "OriginalFilename",   "honeycomb-tx.exe"
+            VALUE "ProductName",        "honeycomb-tx"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

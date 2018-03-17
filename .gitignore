@@ -1,13 +1,13 @@
 *.tar.gz
 
 *.exe
-src/garlicoin
-src/garlicoind
-src/garlicoin-cli
-src/garlicoin-tx
-src/test/test_garlicoin
-src/test/test_garlicoin_fuzzy
-src/qt/test/test_garlicoin-qt
+src/honeycomb
+src/honeycombd
+src/honeycomb-cli
+src/honeycomb-tx
+src/test/test_honeycomb
+src/test/test_honeycomb_fuzzy
+src/qt/test/test_honeycomb-qt
 
 # autoreconf
 Makefile.in
@@ -74,12 +74,12 @@ src/qt/test/moc*.cpp
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-garlicoin-qt
-Garlicoin-Qt.app
+honeycomb-qt
+Honeycomb-Qt.app
 
 # Unit-tests
 Makefile.test
-garlicoin-qt_test
+honeycomb-qt_test
 
 # Resources cpp
 qrc_*.cpp
@@ -92,7 +92,7 @@ build
 *.gcno
 *.gcda
 /*.info
-test_garlicoin.coverage/
+test_honeycomb.coverage/
 total.coverage/
 coverage_percent.txt
 

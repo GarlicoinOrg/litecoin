@@ -62,12 +62,12 @@
         <translation>Vastaanotto-osoitteet</translation>
     </message>
     <message>
-        <source>These are your Garlicoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Nämä ovat Garlicoin-osoitteesi maksujen lähettämistä varten. Tarkista aina määrä ja vastaanotto-osoite ennen kolikoiden lähettämistä.</translation>
+        <source>These are your Honeycomb addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Nämä ovat Honeycomb-osoitteesi maksujen lähettämistä varten. Tarkista aina määrä ja vastaanotto-osoite ennen kolikoiden lähettämistä.</translation>
     </message>
     <message>
-        <source>These are your Garlicoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Tässä ovat Garlicoin vastaanotto-osoitteesi. On suositeltavaa käyttää uutta vastaanotto-osoitetta jokaista lähetystä varten.</translation>
+        <source>These are your Honeycomb addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Tässä ovat Honeycomb vastaanotto-osoitteesi. On suositeltavaa käyttää uutta vastaanotto-osoitetta jokaista lähetystä varten.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -180,7 +180,7 @@
         <translation>Lompakko salattiin</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your garlicoins from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your honeycombs from being stolen by malware infecting your computer.</source>
         <translation>%1 sulkeutuu lopettaakseen salausprosessin. Muista, että salattukaan lompakko ei täysin suojaa sitä haittaohjelmien aiheuttamilta varkauksilta.</translation>
     </message>
     <message>
@@ -338,8 +338,8 @@
         <translation>Ladataan lohkoindeksiä...</translation>
     </message>
     <message>
-        <source>Send coins to a Garlicoin address</source>
-        <translation>Lähetä kolikoita Garlicoin-osoitteeseen</translation>
+        <source>Send coins to a Honeycomb address</source>
+        <translation>Lähetä kolikoita Honeycomb-osoitteeseen</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -362,8 +362,8 @@
         <translation>Varmista &amp;viesti...</translation>
     </message>
     <message>
-        <source>Garlicoin</source>
-        <translation>Garlicoin</translation>
+        <source>Honeycomb</source>
+        <translation>Honeycomb</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -383,19 +383,19 @@
     </message>
     <message>
         <source>Show or hide the main Window</source>
-        <translation>Näytä tai piilota Garlicoin-ikkuna</translation>
+        <translation>Näytä tai piilota Honeycomb-ikkuna</translation>
     </message>
     <message>
         <source>Encrypt the private keys that belong to your wallet</source>
         <translation>Suojaa yksityiset avaimet, jotka kuuluvat lompakkoosi</translation>
     </message>
     <message>
-        <source>Sign messages with your Garlicoin addresses to prove you own them</source>
-        <translation>Allekirjoita viestisi omalla Garlicoin -osoitteellasi todistaaksesi, että omistat ne</translation>
+        <source>Sign messages with your Honeycomb addresses to prove you own them</source>
+        <translation>Allekirjoita viestisi omalla Honeycomb -osoitteellasi todistaaksesi, että omistat ne</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Garlicoin addresses</source>
-        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä Garlicoin -osoitteella</translation>
+        <source>Verify messages to ensure they were signed with specified Honeycomb addresses</source>
+        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä Honeycomb -osoitteella</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -414,8 +414,8 @@
         <translation>Välilehtipalkki</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and garlicoin: URIs)</source>
-        <translation>Pyydä maksuja (Luo QR koodit ja garlicoin: URIt)</translation>
+        <source>Request payments (generates QR codes and honeycomb: URIs)</source>
+        <translation>Pyydä maksuja (Luo QR koodit ja honeycomb: URIt)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -426,16 +426,16 @@
         <translation>Näytä vastaanottamiseen käytettyjen osoitteiden ja nimien lista</translation>
     </message>
     <message>
-        <source>Open a garlicoin: URI or payment request</source>
-        <translation>Avaa garlicoin: URI tai maksupyyntö</translation>
+        <source>Open a honeycomb: URI or payment request</source>
+        <translation>Avaa honeycomb: URI tai maksupyyntö</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Komentorivin valinnat</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Garlicoin network</source>
-        <translation><numerusform>%n aktiivinen yhteys Garlicoin-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä Garlicoin-verkkoon</numerusform></translation>
+        <source>%n active connection(s) to Honeycomb network</source>
+        <translation><numerusform>%n aktiivinen yhteys Honeycomb-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä Honeycomb-verkkoon</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -478,8 +478,8 @@
         <translation>Rahansiirtohistoria on ajan tasalla</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Garlicoin command-line options</source>
-        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista Garlicoinin komentorivivalinnoista</translation>
+        <source>Show the %1 help message to get a list with possible Honeycomb command-line options</source>
+        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista Honeycombin komentorivivalinnoista</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -548,8 +548,8 @@
         <translation>Lompakko on &lt;b&gt;salattu&lt;/b&gt; ja tällä hetkellä &lt;b&gt;lukittuna&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Garlicoin can no longer continue safely and will quit.</source>
-        <translation>Peruuttamaton virhe on tapahtunut. Garlicoin ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
+        <source>A fatal error occurred. Honeycomb can no longer continue safely and will quit.</source>
+        <translation>Peruuttamaton virhe on tapahtunut. Honeycomb ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
     </message>
 </context>
 <context>
@@ -734,8 +734,8 @@
         <translation>Muokkaa lähettävää osoitetta</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Garlicoin address.</source>
-        <translation>Antamasi osoite "%1" ei ole kelvollinen Garlicoin-osoite.</translation>
+        <source>The entered address "%1" is not a valid Honeycomb address.</source>
+        <translation>Antamasi osoite "%1" ei ole kelvollinen Honeycomb-osoite.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -843,8 +843,8 @@
         <translation>Tämä on ensimmäinen kerta, kun %1 on käynnistetty, joten voit valita data-hakemiston paikan.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Garlicoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>%1 lataa ja tallentaa kopion Garlicoinin lohkoketjusta. Vähintään %2Gt dataa tullaan tallentamaan tähän hakemistoon, ja tarve kasvaa ajan myötä. Lompakko tullaan myös tallentamaan tähän hakemistoon.</translation>
+        <source>%1 will download and store a copy of the Honeycomb block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 lataa ja tallentaa kopion Honeycombin lohkoketjusta. Vähintään %2Gt dataa tullaan tallentamaan tähän hakemistoon, ja tarve kasvaa ajan myötä. Lompakko tullaan myös tallentamaan tähän hakemistoon.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1020,16 +1020,16 @@
         <translation>&amp;Käytä varmistamattomia vaihtorahoja</translation>
     </message>
     <message>
-        <source>Automatically open the Garlicoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Avaa Garlicoin-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
+        <source>Automatically open the Honeycomb client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Avaa Honeycomb-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Portin uudelleenohjaus &amp;UPnP:llä</translation>
     </message>
     <message>
-        <source>Connect to the Garlicoin network through a SOCKS5 proxy.</source>
-        <translation>Yhdistä Garlicoin-verkkoon SOCKS5-välityspalvelimen kautta.</translation>
+        <source>Connect to the Honeycomb network through a SOCKS5 proxy.</source>
+        <translation>Yhdistä Honeycomb-verkkoon SOCKS5-välityspalvelimen kautta.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1068,8 +1068,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Garlicoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Yhdistä Garlicoin-verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
+        <source>Connect to the Honeycomb network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Yhdistä Honeycomb-verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -1105,11 +1105,11 @@
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>Yksikkö jona garlicoin-määrät näytetään</translation>
+        <translation>Yksikkö jona honeycomb-määrät näytetään</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Valitse mitä yksikköä käytetään ensisijaisesti garlicoin-määrien näyttämiseen.</translation>
+        <translation>Valitse mitä yksikköä käytetään ensisijaisesti honeycomb-määrien näyttämiseen.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1159,8 +1159,8 @@
         <translation>Lomake</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Garlicoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu Garlicoin-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Honeycomb network after a connection is established, but this process has not completed yet.</source>
+        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu Honeycomb-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1200,7 +1200,7 @@
     </message>
     <message>
         <source>Your current total balance</source>
-        <translation>Tililläsi tällä hetkellä olevien Garlicoinien määrä</translation>
+        <translation>Tililläsi tällä hetkellä olevien Honeycombien määrä</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -1252,8 +1252,8 @@
         <translation>Määrä</translation>
     </message>
     <message>
-        <source>Enter a Garlicoin address (e.g. %1)</source>
-        <translation>Syötä Garlicoin-osoite (esim. %1)</translation>
+        <source>Enter a Honeycomb address (e.g. %1)</source>
+        <translation>Syötä Honeycomb-osoite (esim. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1620,8 +1620,8 @@
         <translation>&amp;Uudelleenkäytä vastaanotto-osoitetta (ei suositella)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Garlicoin network.</source>
-        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä Garlicoin-verkkoon.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Honeycomb network.</source>
+        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä Honeycomb-verkkoon.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1746,7 +1746,7 @@
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Lähetä Garlicoineja</translation>
+        <translation>Lähetä Honeycombeja</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -1940,8 +1940,8 @@
         <translation>Tämä on normaali maksu.</translation>
     </message>
     <message>
-        <source>The Garlicoin address to send the payment to</source>
-        <translation>Garlicoin-osoite johon maksu lähetetään</translation>
+        <source>The Honeycomb address to send the payment to</source>
+        <translation>Honeycomb-osoite johon maksu lähetetään</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1960,8 +1960,8 @@
         <translation>Poista tämä alkio</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less garlicoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Kulu vähennetään lähetettävästä määrästä. Saaja vastaanottaa vähemmän garlicoineja kuin merkitset Määrä-kenttään. Jos saajia on monia, kulu jaetaan tasan.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less honeycombs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Kulu vähennetään lähetettävästä määrästä. Saaja vastaanottaa vähemmän honeycombeja kuin merkitset Määrä-kenttään. Jos saajia on monia, kulu jaetaan tasan.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -1984,8 +1984,8 @@
         <translation>Aseta nimi tälle osoitteelle lisätäksesi sen käytettyjen osoitteiden listalle.</translation>
     </message>
     <message>
-        <source>A message that was attached to the garlicoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Garlicoin network.</source>
-        <translation>Viesti joka liitettiin garlicoin: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä Garlicoin-verkkoon.</translation>
+        <source>A message that was attached to the honeycomb: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Honeycomb network.</source>
+        <translation>Viesti joka liitettiin honeycomb: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä Honeycomb-verkkoon.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2025,8 +2025,8 @@
         <translation>&amp;Allekirjoita viesti</translation>
     </message>
     <message>
-        <source>The Garlicoin address to sign the message with</source>
-        <translation>Garlicoin-osoite jolla viesti allekirjoitetaan</translation>
+        <source>The Honeycomb address to sign the message with</source>
+        <translation>Honeycomb-osoite jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2057,8 +2057,8 @@
         <translation>Kopioi tämänhetkinen allekirjoitus leikepöydälle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Garlicoin address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Garlicoin-osoitteen</translation>
+        <source>Sign the message to prove you own this Honeycomb address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Honeycomb-osoitteen</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2077,12 +2077,12 @@
         <translation>&amp;Varmista viesti</translation>
     </message>
     <message>
-        <source>The Garlicoin address the message was signed with</source>
-        <translation>Garlicoin-osoite jolla viesti on allekirjoitettu</translation>
+        <source>The Honeycomb address the message was signed with</source>
+        <translation>Honeycomb-osoite jolla viesti on allekirjoitettu</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Garlicoin address</source>
-        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä Garlicoin-osoitteella</translation>
+        <source>Verify the message to ensure it was signed with the specified Honeycomb address</source>
+        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä Honeycomb-osoitteella</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2430,8 +2430,8 @@
         <translation>HTTP-palvelinta ei voitu käynnistää. Katso debug-lokista lisätietoja.</translation>
     </message>
     <message>
-        <source>Garlicoin Core</source>
-        <translation>Garlicoin-ydin</translation>
+        <source>Honeycomb Core</source>
+        <translation>Honeycomb-ydin</translation>
     </message>
     <message>
         <source>The %s developers</source>

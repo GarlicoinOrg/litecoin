@@ -2,11 +2,11 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-TESTS += test/test_garlicoin
-bin_PROGRAMS += test/test_garlicoin
-noinst_PROGRAMS += test/test_garlicoin_fuzzy
+TESTS += test/test_honeycomb
+bin_PROGRAMS += test/test_honeycomb
+noinst_PROGRAMS += test/test_honeycomb_fuzzy
 TEST_SRCDIR = test
-TEST_BINARY=test/test_garlicoin$(EXEEXT)
+TEST_BINARY=test/test_honeycomb$(EXEEXT)
 
 JSON_TEST_FILES = \
   test/data/script_tests.json \
@@ -94,31 +94,31 @@ BITCOIN_TESTS += \
   wallet/test/crypto_tests.cpp
 endif
 
-test_test_garlicoin_SOURCES = $(BITCOIN_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
-test_test_garlicoin_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) -I$(builddir)/test/ $(TESTDEFS) $(EVENT_CFLAGS)
-test_test_garlicoin_LDADD =
+test_test_honeycomb_SOURCES = $(BITCOIN_TESTS) $(JSON_TEST_FILES) $(RAW_TEST_FILES)
+test_test_honeycomb_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) -I$(builddir)/test/ $(TESTDEFS) $(EVENT_CFLAGS)
+test_test_honeycomb_LDADD =
 if ENABLE_WALLET
-test_test_garlicoin_LDADD += $(LIBBITCOIN_WALLET)
+test_test_honeycomb_LDADD += $(LIBBITCOIN_WALLET)
 endif
-test_test_garlicoin_LDADD += $(LIBBITCOIN_SERVER) $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) \
+test_test_honeycomb_LDADD += $(LIBBITCOIN_SERVER) $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) \
   $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) $(BOOST_LIBS) $(BOOST_UNIT_TEST_FRAMEWORK_LIB) $(LIBSECP256K1) $(EVENT_LIBS) $(EVENT_PTHREADS_LIBS)
-test_test_garlicoin_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+test_test_honeycomb_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
-test_test_garlicoin_LDADD += $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS)
-test_test_garlicoin_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) -static
+test_test_honeycomb_LDADD += $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS)
+test_test_honeycomb_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) -static
 
 if ENABLE_ZMQ
-test_test_garlicoin_LDADD += $(ZMQ_LIBS)
+test_test_honeycomb_LDADD += $(ZMQ_LIBS)
 endif
 #
 
 # test_bitcoin_fuzzy binary #
-test_test_garlicoin_fuzzy_SOURCES = test/test_bitcoin_fuzzy.cpp
-test_test_garlicoin_fuzzy_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-test_test_garlicoin_fuzzy_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-test_test_garlicoin_fuzzy_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+test_test_honeycomb_fuzzy_SOURCES = test/test_bitcoin_fuzzy.cpp
+test_test_honeycomb_fuzzy_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+test_test_honeycomb_fuzzy_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+test_test_honeycomb_fuzzy_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
-test_test_garlicoin_fuzzy_LDADD = \
+test_test_honeycomb_fuzzy_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
@@ -127,10 +127,10 @@ test_test_garlicoin_fuzzy_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-test_test_garlicoin_fuzzy_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+test_test_honeycomb_fuzzy_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
-nodist_test_test_garlicoin_SOURCES = $(GENERATED_TEST_FILES)
+nodist_test_test_honeycomb_SOURCES = $(GENERATED_TEST_FILES)
 
 $(BITCOIN_TESTS): $(GENERATED_TEST_FILES)
 

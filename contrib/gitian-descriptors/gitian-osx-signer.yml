@@ -1,5 +1,5 @@
 ---
-name: "garlicoin-dmg-signer"
+name: "honeycomb-dmg-signer"
 suites:
 - "trusty"
 architectures:
@@ -7,10 +7,10 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/garlicoin-project/garlicoin-detached-sigs.git"
+- "url": "https://github.com/honeycomb-project/honeycomb-detached-sigs.git"
   "dir": "signature"
 files:
-- "garlicoin-osx-unsigned.tar.gz"
+- "honeycomb-osx-unsigned.tar.gz"
 script: |
   WRAP_DIR=$HOME/wrapped
   mkdir -p ${WRAP_DIR}
@@ -27,8 +27,8 @@ script: |
     chmod +x ${WRAP_DIR}/${prog}
   done
 
-  UNSIGNED=garlicoin-osx-unsigned.tar.gz
-  SIGNED=garlicoin-osx-signed.dmg
+  UNSIGNED=honeycomb-osx-unsigned.tar.gz
+  SIGNED=honeycomb-osx-signed.dmg
 
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"
