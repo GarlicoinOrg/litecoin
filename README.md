@@ -1,9 +1,9 @@
 Honeycomb Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/HoneycombOrg/Honeycomb.svg?branch=master)](https://travis-ci.org/HoneycombOrg/Honeycomb)
+[![Build Status](https://travis-ci.org/honeycomb-project/honeycomb.svg?branch=master)](https://travis-ci.org/honeycomb-project/honeycomb)
 
-http://honeycomb.io
+http://honeycomb.cash
 
 What is Honeycomb?
 ----------------
@@ -16,7 +16,7 @@ software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
 the Honeycomb Core software, see 
-[http://honeycomb.io](http://honeycomb.io).
+[http://honeycomb.cash](http://honeycomb.cash).
 
 License
 -------
@@ -29,12 +29,12 @@ Development Process
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
 completely stable. 
-[Tags](https://github.com/honeycomborg/honeycomb/tags) are created
+[Tags](https://github.com/honeycomb-project/honeycomb/tags) are created
 regularly to indicate new official, stable release versions of Honeycomb Core.
 
 The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Developer Discord can be found [Here](https://discord.gg/Vp4Xz26).
+Developer Discord can be found [Here](https://discord.gg/73ZYBWS).
 
 Testing
 -------
