@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Garlicoin"
-            VALUE "FileDescription",    "garlicoind (Garlicoin node with a JSON-RPC server)"
+            VALUE "CompanyName",        "Honeycomb"
+            VALUE "FileDescription",    "honeycombd (Honeycomb node with a JSON-RPC server)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "garlicoind"
+            VALUE "InternalName",       "honeycombd"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "garlicoind.exe"
-            VALUE "ProductName",        "garlicoind"
+            VALUE "OriginalFilename",   "honeycombd.exe"
+            VALUE "ProductName",        "honeycombd"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

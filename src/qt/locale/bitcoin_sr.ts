@@ -130,8 +130,8 @@
         <translation>Промени &amp;лозинку...</translation>
     </message>
     <message>
-        <source>Send coins to a Garlicoin address</source>
-        <translation>Пошаљите новац на garlicoin адресу</translation>
+        <source>Send coins to a Honeycomb address</source>
+        <translation>Пошаљите новац на honeycomb адресу</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>

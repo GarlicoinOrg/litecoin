@@ -1,6 +1,6 @@
 ### TestGen ###
 
-Utilities to generate test vectors for the data-driven Garlicoin tests.
+Utilities to generate test vectors for the data-driven Honeycomb tests.
 
 Usage: 
 

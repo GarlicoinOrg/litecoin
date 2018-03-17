@@ -69,13 +69,13 @@ before_script:
   tar -C depends/SDKs -xf depends/sdk-sources/MacOSX${OSX_SDK}.sdk.tar.gz; fi
 - make $MAKEJOBS -C depends HOST=$HOST $DEP_OPTS
 script:
-- if [ "$CHECK_DOC" = 1 -a "$TRAVIS_REPO_SLUG" = "garlicoin-project/garlicoin" -a
+- if [ "$CHECK_DOC" = 1 -a "$TRAVIS_REPO_SLUG" = "honeycomb-project/honeycomb" -a
   "$TRAVIS_PULL_REQUEST" = "false" ]; then while read LINE; do travis_retry gpg --keyserver
   hkp://subset.pool.sks-keyservers.net --recv-keys $LINE; done < contrib/verify-commits/trusted-keys;
   fi
-- if [ "$CHECK_DOC" = 1 -a "$TRAVIS_REPO_SLUG" = "garlicoin-project/garlicoin" -a
+- if [ "$CHECK_DOC" = 1 -a "$TRAVIS_REPO_SLUG" = "honeycomb-project/honeycomb" -a
   "$TRAVIS_PULL_REQUEST" = "false" ]; then git fetch --unshallow; fi
-- if [ "$CHECK_DOC" = 1 -a "$TRAVIS_REPO_SLUG" = "garlicoin-project/garlicoin" -a
+- if [ "$CHECK_DOC" = 1 -a "$TRAVIS_REPO_SLUG" = "honeycomb-project/honeycomb" -a
   "$TRAVIS_PULL_REQUEST" = "false" ]; then contrib/verify-commits/verify-commits.sh;
   fi
 - export TRAVIS_COMMIT_LOG=`git log --format=fuller -1`
@@ -89,7 +89,7 @@ script:
 - "../configure --cache-file=config.cache $BITCOIN_CONFIG_ALL $BITCOIN_CONFIG || (
   cat config.log && false)"
 - make distdir VERSION=$HOST
-- cd garlicoin-$HOST
+- cd honeycomb-$HOST
 - "./configure --cache-file=../config.cache $BITCOIN_CONFIG_ALL $BITCOIN_CONFIG ||
   ( cat config.log && false)"
 - make $MAKEJOBS $GOAL || ( echo "Build failure. Verbose build follows." && make $GOAL
@@ -102,9 +102,9 @@ script:
 - if [ "$RUN_TESTS" = "true" ]; then test/functional/test_runner.py --coverage --quiet
   ${extended}; fi
 - if [ "$HOST" = "x86_64-apple-darwin11" ]; then
-    cd $TRAVIS_BUILD_DIR/build/ && tar -zcvf "Garlicoin-${HOST}.tar.gz" garlicoin-x86_64-apple-darwin11/dist/;
+    cd $TRAVIS_BUILD_DIR/build/ && tar -zcvf "Honeycomb-${HOST}.tar.gz" honeycomb-x86_64-apple-darwin11/dist/;
   else
-    cd $TRAVIS_BUILD_DIR/out/$TRAVIS_PULL_REQUEST && tar -zcvf "Garlicoin-${HOST}.tar.gz" *$HOST;
+    cd $TRAVIS_BUILD_DIR/out/$TRAVIS_PULL_REQUEST && tar -zcvf "Honeycomb-${HOST}.tar.gz" *$HOST;
   fi
 after_script:
 - echo $TRAVIS_COMMIT_RANGE
@@ -116,6 +116,6 @@ deploy:
   skip_cleanup: true
   api_key:
     secure: uuIrcVR8fmTpexs8T8Qjmuc0/F1Yi9NUf4R1np/lZz4PF9zmT4KsIieTyKMYSwe8ogWoKvm1oaYlyoCO1rn3EkoBvOc178fUZnnhmxnZFCIMkWOf6ZL69MmLBUB0ZiIzvrjs611iunrxej3/R95BgnSie6BMQzQV30B23gAEKvs5x5TB53gPELhkH/1CWYSqK0XBoM354SXzzVR1o5fRZlRjyhbnrwAuuqbDM2+Ti5Cudxf1+36ynPrM8GfCqdfDn0+AJNua9eCuAoXQRBIdi9MGxubWVo1Y35/IERMlsTjZMj11QWpClPizio9r7TcJttQ/YzJu09OewPo+MkqNc5GCSn71xzQft1eiVU0Ch5dSyOuD83l9vs/Uc1hZbl8fovmEnjWGG/3yKX6BsQxYwavP5zEaizmfoduebwv5RV+abHNvw7Y6kw2DWM1WBi2e2NQsv3A6kCxSdEhRrLBBV77Wszd4Br9qwsraVzB2m6lIlQCWXgnyAv97AWdVHiIbNyEEJ/61mXN1lAImnCHurX4DC5RlSsFCUpWb7jXLgt9gthqZ5xhFjzrW5AIWO0BWw6lPAt59OUN2WFm2u/BTqw+A9eQwxmsLhxJ6RzRg8Cb05TMMXjON+Ix2TG0VgGwQ0U2eLAMN41lT/93Ey3k3BysMmK8ayJn3pWdJBeP0maw=
-  file: "Garlicoin-${HOST}.tar.gz"
+  file: "Honeycomb-${HOST}.tar.gz"
   on:
-    repo: GarlicoinOrg/Garlicoin
+    repo: HoneycombOrg/Honeycomb

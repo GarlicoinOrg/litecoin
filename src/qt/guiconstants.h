@@ -48,9 +48,9 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 36
 
-#define QAPP_ORG_NAME "Garlicoin"
-#define QAPP_ORG_DOMAIN "garlicoin.io"
-#define QAPP_APP_NAME_DEFAULT "Garlicoin-Qt"
-#define QAPP_APP_NAME_TESTNET "Garlicoin-Qt-testnet"
+#define QAPP_ORG_NAME "Honeycomb"
+#define QAPP_ORG_DOMAIN "honeycomb.io"
+#define QAPP_APP_NAME_DEFAULT "Honeycomb-Qt"
+#define QAPP_APP_NAME_TESTNET "Honeycomb-Qt-testnet"
 
 #endif // BITCOIN_QT_GUICONSTANTS_H

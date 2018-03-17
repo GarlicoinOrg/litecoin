@@ -17,7 +17,7 @@ osx=true
 SIGNER=
 VERSION=
 commit=false
-url=https://github.com/garlicoin-project/garlicoin
+url=https://github.com/honeycomb-project/honeycomb
 proc=2
 mem=2000
 lxc=true
@@ -31,7 +31,7 @@ commitFiles=true
 read -d '' usage <<- EOF
 Usage: $scriptName [-c|u|v|b|s|B|o|h|j|m|] signer version
 
-Run this script from the directory containing the garlicoin, gitian-builder, gitian.sigs.ltc, and garlicoin-detached-sigs.
+Run this script from the directory containing the honeycomb, gitian-builder, gitian.sigs.ltc, and honeycomb-detached-sigs.
 
 Arguments:
 signer          GPG signer to sign each build assert file
@@ -39,7 +39,7 @@ version		Version number, commit, or branch to build. If building a commit or bra
 
 Options:
 -c|--commit	Indicate that the version argument is for a commit or branch
--u|--url	Specify the URL of the repository. Default is https://github.com/garlicoin-project/garlicoin
+-u|--url	Specify the URL of the repository. Default is https://github.com/honeycomb-project/honeycomb
 -v|--verify 	Verify the gitian build
 -b|--build	Do a gitian build
 -s|--sign	Make signed binaries for Windows and Mac OSX
@@ -232,8 +232,8 @@ echo ${COMMIT}
 if [[ $setup = true ]]
 then
     sudo apt-get install ruby apache2 git apt-cacher-ng python-vm-builder qemu-kvm qemu-utils
-    git clone https://github.com/garlicoin-project/gitian.sigs.ltc.git
-    git clone https://github.com/garlicoin-project/garlicoin-detached-sigs.git
+    git clone https://github.com/honeycomb-project/gitian.sigs.ltc.git
+    git clone https://github.com/honeycomb-project/honeycomb-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
     pushd ./gitian-builder
     if [[ -n "$USE_LXC" ]]
@@ -247,7 +247,7 @@ then
 fi
 
 # Set up build
-pushd ./garlicoin
+pushd ./honeycomb
 git fetch
 git checkout ${COMMIT}
 popd
@@ -256,7 +256,7 @@ popd
 if [[ $build = true ]]
 then
 	# Make output folder
-	mkdir -p ./garlicoin-binaries/${VERSION}
+	mkdir -p ./honeycomb-binaries/${VERSION}
 	
 	# Build Dependencies
 	echo ""
@@ -266,7 +266,7 @@ then
 	mkdir -p inputs
 	wget -N -P inputs $osslPatchUrl
 	wget -N -P inputs $osslTarUrl
-	make -C ../garlicoin/depends download SOURCES_PATH=`pwd`/cache/common
+	make -C ../honeycomb/depends download SOURCES_PATH=`pwd`/cache/common
 
 	# Linux
 	if [[ $linux = true ]]
@@ -274,9 +274,9 @@ then
             echo ""
 	    echo "Compiling ${VERSION} Linux"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit garlicoin=${COMMIT} --url garlicoin=${url} ../garlicoin/contrib/gitian-descriptors/gitian-linux.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.ltc/ ../garlicoin/contrib/gitian-descriptors/gitian-linux.yml
-	    mv build/out/garlicoin-*.tar.gz build/out/src/garlicoin-*.tar.gz ../garlicoin-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit honeycomb=${COMMIT} --url honeycomb=${url} ../honeycomb/contrib/gitian-descriptors/gitian-linux.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs.ltc/ ../honeycomb/contrib/gitian-descriptors/gitian-linux.yml
+	    mv build/out/honeycomb-*.tar.gz build/out/src/honeycomb-*.tar.gz ../honeycomb-binaries/${VERSION}
 	fi
 	# Windows
 	if [[ $windows = true ]]
@@ -284,10 +284,10 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit garlicoin=${COMMIT} --url garlicoin=${url} ../garlicoin/contrib/gitian-descriptors/gitian-win.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs.ltc/ ../garlicoin/contrib/gitian-descriptors/gitian-win.yml
-	    mv build/out/garlicoin-*-win-unsigned.tar.gz inputs/garlicoin-win-unsigned.tar.gz
-	    mv build/out/garlicoin-*.zip build/out/garlicoin-*.exe ../garlicoin-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit honeycomb=${COMMIT} --url honeycomb=${url} ../honeycomb/contrib/gitian-descriptors/gitian-win.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs.ltc/ ../honeycomb/contrib/gitian-descriptors/gitian-win.yml
+	    mv build/out/honeycomb-*-win-unsigned.tar.gz inputs/honeycomb-win-unsigned.tar.gz
+	    mv build/out/honeycomb-*.zip build/out/honeycomb-*.exe ../honeycomb-binaries/${VERSION}
 	fi
 	# Mac OSX
 	if [[ $osx = true ]]
@@ -295,10 +295,10 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit garlicoin=${COMMIT} --url garlicoin=${url} ../garlicoin/contrib/gitian-descriptors/gitian-osx.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.ltc/ ../garlicoin/contrib/gitian-descriptors/gitian-osx.yml
-	    mv build/out/garlicoin-*-osx-unsigned.tar.gz inputs/garlicoin-osx-unsigned.tar.gz
-	    mv build/out/garlicoin-*.tar.gz build/out/garlicoin-*.dmg ../garlicoin-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit honeycomb=${COMMIT} --url honeycomb=${url} ../honeycomb/contrib/gitian-descriptors/gitian-osx.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.ltc/ ../honeycomb/contrib/gitian-descriptors/gitian-osx.yml
+	    mv build/out/honeycomb-*-osx-unsigned.tar.gz inputs/honeycomb-osx-unsigned.tar.gz
+	    mv build/out/honeycomb-*.tar.gz build/out/honeycomb-*.dmg ../honeycomb-binaries/${VERSION}
 	fi
 	popd
 
@@ -325,27 +325,27 @@ then
 	echo ""
 	echo "Verifying v${VERSION} Linux"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-linux ../garlicoin/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-linux ../honeycomb/contrib/gitian-descriptors/gitian-linux.yml
 	# Windows
 	echo ""
 	echo "Verifying v${VERSION} Windows"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-unsigned ../garlicoin/contrib/gitian-descriptors/gitian-win.yml
+	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-unsigned ../honeycomb/contrib/gitian-descriptors/gitian-win.yml
 	# Mac OSX	
 	echo ""
 	echo "Verifying v${VERSION} Mac OSX"
 	echo ""	
-	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-unsigned ../garlicoin/contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-unsigned ../honeycomb/contrib/gitian-descriptors/gitian-osx.yml
 	# Signed Windows
 	echo ""
 	echo "Verifying v${VERSION} Signed Windows"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../garlicoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../honeycomb/contrib/gitian-descriptors/gitian-osx-signer.yml
 	# Signed Mac OSX
 	echo ""
 	echo "Verifying v${VERSION} Signed Mac OSX"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../garlicoin/contrib/gitian-descriptors/gitian-osx-signer.yml	
+	./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../honeycomb/contrib/gitian-descriptors/gitian-osx-signer.yml	
 	popd
 fi
 
@@ -360,10 +360,10 @@ then
 	    echo ""
 	    echo "Signing ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -i --commit signature=${COMMIT} ../garlicoin/contrib/gitian-descriptors/gitian-win-signer.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs.ltc/ ../garlicoin/contrib/gitian-descriptors/gitian-win-signer.yml
-	    mv build/out/garlicoin-*win64-setup.exe ../garlicoin-binaries/${VERSION}
-	    mv build/out/garlicoin-*win32-setup.exe ../garlicoin-binaries/${VERSION}
+	    ./bin/gbuild -i --commit signature=${COMMIT} ../honeycomb/contrib/gitian-descriptors/gitian-win-signer.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs.ltc/ ../honeycomb/contrib/gitian-descriptors/gitian-win-signer.yml
+	    mv build/out/honeycomb-*win64-setup.exe ../honeycomb-binaries/${VERSION}
+	    mv build/out/honeycomb-*win32-setup.exe ../honeycomb-binaries/${VERSION}
 	fi
 	# Sign Mac OSX
 	if [[ $osx = true ]]
@@ -371,9 +371,9 @@ then
 	    echo ""
 	    echo "Signing ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -i --commit signature=${COMMIT} ../garlicoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs.ltc/ ../garlicoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-	    mv build/out/garlicoin-osx-signed.dmg ../garlicoin-binaries/${VERSION}/garlicoin-${VERSION}-osx.dmg
+	    ./bin/gbuild -i --commit signature=${COMMIT} ../honeycomb/contrib/gitian-descriptors/gitian-osx-signer.yml
+	    ./bin/gsign -p $signProg --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs.ltc/ ../honeycomb/contrib/gitian-descriptors/gitian-osx-signer.yml
+	    mv build/out/honeycomb-osx-signed.dmg ../honeycomb-binaries/${VERSION}/honeycomb-${VERSION}-osx.dmg
 	fi
 	popd
 
