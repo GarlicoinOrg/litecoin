@@ -109,13 +109,3 @@ script:
 after_script:
 - echo $TRAVIS_COMMIT_RANGE
 - echo $TRAVIS_COMMIT_LOG
-before_deploy:
-- git tag "$(date +'%Y%m%d%H%M%S')-${HOST}"
-deploy:
-  provider: releases
-  skip_cleanup: true
-  api_key:
-    secure: uuIrcVR8fmTpexs8T8Qjmuc0/F1Yi9NUf4R1np/lZz4PF9zmT4KsIieTyKMYSwe8ogWoKvm1oaYlyoCO1rn3EkoBvOc178fUZnnhmxnZFCIMkWOf6ZL69MmLBUB0ZiIzvrjs611iunrxej3/R95BgnSie6BMQzQV30B23gAEKvs5x5TB53gPELhkH/1CWYSqK0XBoM354SXzzVR1o5fRZlRjyhbnrwAuuqbDM2+Ti5Cudxf1+36ynPrM8GfCqdfDn0+AJNua9eCuAoXQRBIdi9MGxubWVo1Y35/IERMlsTjZMj11QWpClPizio9r7TcJttQ/YzJu09OewPo+MkqNc5GCSn71xzQft1eiVU0Ch5dSyOuD83l9vs/Uc1hZbl8fovmEnjWGG/3yKX6BsQxYwavP5zEaizmfoduebwv5RV+abHNvw7Y6kw2DWM1WBi2e2NQsv3A6kCxSdEhRrLBBV77Wszd4Br9qwsraVzB2m6lIlQCWXgnyAv97AWdVHiIbNyEEJ/61mXN1lAImnCHurX4DC5RlSsFCUpWb7jXLgt9gthqZ5xhFjzrW5AIWO0BWw6lPAt59OUN2WFm2u/BTqw+A9eQwxmsLhxJ6RzRg8Cb05TMMXjON+Ix2TG0VgGwQ0U2eLAMN41lT/93Ey3k3BysMmK8ayJn3pWdJBeP0maw=
-  file: "Garlicoin-${HOST}.tar.gz"
-  on:
-    repo: GarlicoinOrg/Garlicoin
