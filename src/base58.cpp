@@ -219,10 +219,10 @@ private:
     CChainParams::Base58Type script_type_;
 
 public:
-    CBitcoinAddressVisitor(CBitcoinAddress* addrIn, CChainParams::Base58Type script_type) 
-      : addr(addrIn), script_type_(script_type) 
+    CBitcoinAddressVisitor(CBitcoinAddress* addrIn, CChainParams::Base58Type script_type)
+      : addr(addrIn), script_type_(script_type)
     {
-        assert(script_type == CChainParams::SCRIPT_ADDRESS || 
+        assert(script_type == CChainParams::SCRIPT_ADDRESS ||
                script_type == CChainParams::SCRIPT_ADDRESS2);
     }
 
@@ -280,6 +280,25 @@ CTxDestination CBitcoinAddress::Get() const
     else
         return CNoDestination();
 }
+
+bool CBitcoinAddress::GetIndexKey(uint160& hashBytes, int& type) const
+{
+    if (!IsValid()) {
+        return false;
+    } else if (vchVersion == Params().Base58Prefix(CChainParams::PUBKEY_ADDRESS)) {
+        memcpy(&hashBytes, &vchData[0], 20);
+        type = 1;
+        return true;
+    } else if (vchVersion == Params().Base58Prefix(CChainParams::SCRIPT_ADDRESS) ||
+               vchVersion == Params().Base58Prefix(CChainParams::SCRIPT_ADDRESS2)) {
+        memcpy(&hashBytes, &vchData[0], 20);
+        type = 2;
+        return true;
+    }
+
+    return false;
+}
+
 
 bool CBitcoinAddress::GetKeyID(CKeyID& keyID) const
 {

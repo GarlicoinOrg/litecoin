@@ -1,3 +1,6 @@
+# WARNING: THIS IS UNSTABLE, IT INTRODUCES NEW INDEXES TO SPEED UP ACCOUNT ADDRESS NOT SUITABLE FOR NORMAL USE
+
+
 Garlicoin Core integration/staging tree
 =====================================
 

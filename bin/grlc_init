@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -ex
+
+# This shouldn't be in the Dockerfile or containers built from the same image
+# will have the same credentials.
+if [ ! -e "$HOME/.garlicoin/garlicoin.conf" ]; then
+    mkdir -p $HOME/.garlicoin
+
+    echo "Creating garlicoin.conf"
+
+    # Seed a random password for JSON RPC server
+    cat <<EOF > $HOME/.garlicoin/garlicoin.conf
+disablewallet=${DISABLEWALLET:-1}
+printtoconsole=${PRINTTOCONSOLE:-1}
+rpcuser=${RPCUSER:-garlicoinrpc}
+rpcallowip=${RPCALLOWIP:-172.17.0.0/24}
+rpcpassword=${RPCPASSWORD:-`dd if=/dev/urandom bs=33 count=1 2>/dev/null | base64`}
+EOF
+
+fi
+
+cat $HOME/.garlicoin/garlicoin.conf
+
+echo "Initialization completed successfully"

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -ex
+
+# Generate bitcoin.conf
+grlc_init
+
+if [ $# -gt 0 ]; then
+    args=("$@")
+else
+    args=("-rpcallowip=::/0")
+fi
+
+exec garlicoind "${args[@]}"
