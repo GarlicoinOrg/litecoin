@@ -402,7 +402,9 @@ UniValue getaddressesbyaccount(const JSONRPCRequest& request)
     return ret;
 }
 
-static void SendMoney(CWallet * const pwallet, const CTxDestination &address, CAmount nValue, bool fSubtractFeeFromAmount, CWalletTx& wtxNew, const CCoinControl& coin_control)
+static void SendMoney(CWallet * const pwallet, const CTxDestination &address, CAmount nValue, 
+                      bool fSubtractFeeFromAmount, CWalletTx& wtxNew, const CCoinControl& coin_control, 
+                      const std::string& dataMsg = "")
 {
     CAmount curBalance = pwallet->GetBalance();
 
@@ -428,7 +430,7 @@ static void SendMoney(CWallet * const pwallet, const CTxDestination &address, CA
     int nChangePosRet = -1;
     CRecipient recipient = {scriptPubKey, nValue, fSubtractFeeFromAmount};
     vecSend.push_back(recipient);
-    if (!pwallet->CreateTransaction(vecSend, wtxNew, reservekey, nFeeRequired, nChangePosRet, strError, coin_control)) {
+    if (!pwallet->CreateTransaction(vecSend, wtxNew, reservekey, nFeeRequired, nChangePosRet, strError, coin_control, true, dataMsg)) {
         if (!fSubtractFeeFromAmount && nValue + nFeeRequired > curBalance)
             strError = strprintf("Error: This transaction requires a transaction fee of at least %s", FormatMoney(nFeeRequired));
         throw JSONRPCError(RPC_WALLET_ERROR, strError);
@@ -447,7 +449,7 @@ UniValue sendtoaddress(const JSONRPCRequest& request)
         return NullUniValue;
     }
 
-    if (request.fHelp || request.params.size() < 2 || request.params.size() > 8)
+    if (request.fHelp || request.params.size() < 2 || request.params.size() > 9)
         throw std::runtime_error(
             "sendtoaddress \"address\" amount ( \"comment\" \"comment_to\" subtractfeefromamount replaceable conf_target \"estimate_mode\")\n"
             "\nSend an amount to a given address.\n"
@@ -455,16 +457,17 @@ UniValue sendtoaddress(const JSONRPCRequest& request)
             "\nArguments:\n"
             "1. \"address\"            (string, required) The garlicoin address to send to.\n"
             "2. \"amount\"             (numeric or string, required) The amount in " + CURRENCY_UNIT + " to send. eg 0.1\n"
-            "3. \"comment\"            (string, optional) A comment used to store what the transaction is for. \n"
+            "3. \"yak\"                (string, optional) Add an optional message to the blockchain\n"
+            "4. \"comment\"            (string, optional) A comment used to store what the transaction is for. \n"
             "                             This is not part of the transaction, just kept in your wallet.\n"
-            "4. \"comment_to\"         (string, optional) A comment to store the name of the person or organization \n"
+            "5. \"comment_to\"         (string, optional) A comment to store the name of the person or organization \n"
             "                             to which you're sending the transaction. This is not part of the \n"
             "                             transaction, just kept in your wallet.\n"
-            "5. subtractfeefromamount  (boolean, optional, default=false) The fee will be deducted from the amount being sent.\n"
+            "6. subtractfeefromamount  (boolean, optional, default=false) The fee will be deducted from the amount being sent.\n"
             "                             The recipient will receive less garlicoins than you enter in the amount field.\n"
-            "6. replaceable            (boolean, optional) Allow this transaction to be replaced by a transaction with higher fees via BIP 125\n"
-            "7. conf_target            (numeric, optional) Confirmation target (in blocks)\n"
-            "8. \"estimate_mode\"      (string, optional, default=UNSET) The fee estimate mode, must be one of:\n"
+            "7. replaceable            (boolean, optional) Allow this transaction to be replaced by a transaction with higher fees via BIP 125\n"
+            "8. conf_target            (numeric, optional) Confirmation target (in blocks)\n"
+            "9. \"estimate_mode\"      (string, optional, default=UNSET) The fee estimate mode, must be one of:\n"
             "       \"UNSET\"\n"
             "       \"ECONOMICAL\"\n"
             "       \"CONSERVATIVE\"\n"
@@ -497,35 +500,40 @@ UniValue sendtoaddress(const JSONRPCRequest& request)
 
     // Wallet comments
     CWalletTx wtx;
-    if (!request.params[2].isNull() && !request.params[2].get_str().empty())
-        wtx.mapValue["comment"] = request.params[2].get_str();
     if (!request.params[3].isNull() && !request.params[3].get_str().empty())
-        wtx.mapValue["to"]      = request.params[3].get_str();
+        wtx.mapValue["comment"] = request.params[3].get_str();
+    if (!request.params[4].isNull() && !request.params[4].get_str().empty())
+        wtx.mapValue["to"]      = request.params[4].get_str();
 
     bool fSubtractFeeFromAmount = false;
-    if (!request.params[4].isNull()) {
-        fSubtractFeeFromAmount = request.params[4].get_bool();
+    if (!request.params[5].isNull()) {
+        fSubtractFeeFromAmount = request.params[5].get_bool();
     }
 
     CCoinControl coin_control;
-    if (!request.params[5].isNull()) {
-        coin_control.signalRbf = request.params[5].get_bool();
-    }
-
     if (!request.params[6].isNull()) {
-        coin_control.m_confirm_target = ParseConfirmTarget(request.params[6]);
+        coin_control.signalRbf = request.params[6].get_bool();
     }
 
     if (!request.params[7].isNull()) {
-        if (!FeeModeFromString(request.params[7].get_str(), coin_control.m_fee_mode)) {
+        coin_control.m_confirm_target = ParseConfirmTarget(request.params[7]);
+    }
+
+    if (!request.params[8].isNull()) {
+        if (!FeeModeFromString(request.params[8].get_str(), coin_control.m_fee_mode)) {
             throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid estimate_mode parameter");
         }
     }
 
+    std::string dataMsg = "";
+    if(!request.params[2].isNull()) {
+        dataMsg = request.params[2].get_str();
+    }
+    printf("Data msg: %s", dataMsg.c_str());
 
     EnsureWalletIsUnlocked(pwallet);
 
-    SendMoney(pwallet, dest, nAmount, fSubtractFeeFromAmount, wtx, coin_control);
+    SendMoney(pwallet, dest, nAmount, fSubtractFeeFromAmount, wtx, coin_control, dataMsg);
 
     return wtx.GetHash().GetHex();
 }

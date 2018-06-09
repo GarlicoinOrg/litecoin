@@ -2698,7 +2698,8 @@ OutputType CWallet::TransactionChangeType(OutputType change_type, const std::vec
 }
 
 bool CWallet::CreateTransaction(const std::vector<CRecipient>& vecSend, CWalletTx& wtxNew, CReserveKey& reservekey, CAmount& nFeeRet,
-                                int& nChangePosInOut, std::string& strFailReason, const CCoinControl& coin_control, bool sign)
+                                int& nChangePosInOut, std::string& strFailReason, const CCoinControl& coin_control, bool sign,
+                                const std::string& dataMsg)
 {
     CAmount nValue = 0;
     int nChangePosRequest = nChangePosInOut;
@@ -2816,15 +2817,15 @@ bool CWallet::CreateTransaction(const std::vector<CRecipient>& vecSend, CWalletT
                 CAmount value = 0;
 
                 // extract and validate DATA
-                std::string strData = "5361792048656c6c6f20746f204d79204c6974746c6520467269656e64";
+                if(dataMsg != ""){
+                    if (!IsHex(dataMsg))
+                        throw std::runtime_error("invalid TX output data");
 
-                if (!IsHex(strData))
-                    throw std::runtime_error("invalid TX output data");
+                    std::vector<unsigned char> data = ParseHex(dataMsg);
 
-                std::vector<unsigned char> data = ParseHex(strData);
-
-                CTxOut txout(value, CScript() << OP_RETURN << data);
-                txNew.vout.push_back(txout);
+                    CTxOut txout(value, CScript() << OP_RETURN << data);
+                    txNew.vout.push_back(txout);
+                }
 
                 CAmount nValueToSelect = nValue;
                 if (nSubtractFeeFromAmount == 0)
