@@ -2821,7 +2821,7 @@ bool CWallet::CreateTransaction(const std::vector<CRecipient>& vecSend, CWalletT
                     if (!IsHex(dataMsg))
                         throw std::runtime_error("invalid TX output data");
 
-                    std::vector<unsigned char> data = ParseHex(dataMsg);
+                    std::vector<unsigned char> data = ParseHex("feab" + dataMsg);
 
                     CTxOut txout(value, CScript() << OP_RETURN << data);
                     txNew.vout.push_back(txout);
