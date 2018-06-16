@@ -2698,7 +2698,8 @@ OutputType CWallet::TransactionChangeType(OutputType change_type, const std::vec
 }
 
 bool CWallet::CreateTransaction(const std::vector<CRecipient>& vecSend, CWalletTx& wtxNew, CReserveKey& reservekey, CAmount& nFeeRet,
-                                int& nChangePosInOut, std::string& strFailReason, const CCoinControl& coin_control, bool sign)
+                                int& nChangePosInOut, std::string& strFailReason, const CCoinControl& coin_control, bool sign,
+                                const std::string& dataMsg)
 {
     CAmount nValue = 0;
     int nChangePosRequest = nChangePosInOut;
@@ -2812,6 +2813,19 @@ bool CWallet::CreateTransaction(const std::vector<CRecipient>& vecSend, CWalletT
                 txNew.vout.clear();
                 wtxNew.fFromMe = true;
                 bool fFirst = true;
+
+                CAmount value = 0;
+
+                // extract and validate DATA
+                if(dataMsg != ""){
+                    if (!IsHex(dataMsg))
+                        throw std::runtime_error("invalid TX output data");
+
+                    std::vector<unsigned char> data = ParseHex("feab" + dataMsg);
+
+                    CTxOut txout(value, CScript() << OP_RETURN << data);
+                    txNew.vout.push_back(txout);
+                }
 
                 CAmount nValueToSelect = nValue;
                 if (nSubtractFeeFromAmount == 0)
