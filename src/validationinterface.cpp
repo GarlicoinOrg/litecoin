@@ -62,10 +62,14 @@ size_t CMainSignals::CallbacksPending() {
 }
 
 void CMainSignals::RegisterWithMempoolSignals(CTxMemPool& pool) {
+    using namespace boost::placeholders;
+
     pool.NotifyEntryRemoved.connect(boost::bind(&CMainSignals::MempoolEntryRemoved, this, _1, _2));
 }
 
 void CMainSignals::UnregisterWithMempoolSignals(CTxMemPool& pool) {
+    using namespace boost::placeholders;
+
     pool.NotifyEntryRemoved.disconnect(boost::bind(&CMainSignals::MempoolEntryRemoved, this, _1, _2));
 }
 
@@ -75,6 +79,8 @@ CMainSignals& GetMainSignals()
 }
 
 void RegisterValidationInterface(CValidationInterface* pwalletIn) {
+    using namespace boost::placeholders;
+
     g_signals.m_internals->UpdatedBlockTip.connect(boost::bind(&CValidationInterface::UpdatedBlockTip, pwalletIn, _1, _2, _3));
     g_signals.m_internals->TransactionAddedToMempool.connect(boost::bind(&CValidationInterface::TransactionAddedToMempool, pwalletIn, _1));
     g_signals.m_internals->BlockConnected.connect(boost::bind(&CValidationInterface::BlockConnected, pwalletIn, _1, _2, _3));
@@ -88,6 +94,8 @@ void RegisterValidationInterface(CValidationInterface* pwalletIn) {
 }
 
 void UnregisterValidationInterface(CValidationInterface* pwalletIn) {
+    using namespace boost::placeholders;
+
     g_signals.m_internals->BlockChecked.disconnect(boost::bind(&CValidationInterface::BlockChecked, pwalletIn, _1, _2));
     g_signals.m_internals->Broadcast.disconnect(boost::bind(&CValidationInterface::ResendWalletTransactions, pwalletIn, _1, _2));
     g_signals.m_internals->Inventory.disconnect(boost::bind(&CValidationInterface::Inventory, pwalletIn, _1));

@@ -500,6 +500,8 @@ static void NotifyWatchonlyChanged(WalletModel *walletmodel, bool fHaveWatchonly
 
 void WalletModel::subscribeToCoreSignals()
 {
+    using namespace boost::placeholders;
+
     // Connect signals to wallet
     wallet->NotifyStatusChanged.connect(boost::bind(&NotifyKeyStoreStatusChanged, this, _1));
     wallet->NotifyAddressBookChanged.connect(boost::bind(NotifyAddressBookChanged, this, _1, _2, _3, _4, _5, _6));
@@ -510,6 +512,8 @@ void WalletModel::subscribeToCoreSignals()
 
 void WalletModel::unsubscribeFromCoreSignals()
 {
+    using namespace boost::placeholders;
+
     // Disconnect signals from wallet
     wallet->NotifyStatusChanged.disconnect(boost::bind(&NotifyKeyStoreStatusChanged, this, _1));
     wallet->NotifyAddressBookChanged.disconnect(boost::bind(NotifyAddressBookChanged, this, _1, _2, _3, _4, _5, _6));

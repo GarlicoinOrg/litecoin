@@ -2278,10 +2278,14 @@ private:
 
 public:
     explicit ConnectTrace(CTxMemPool &_pool) : blocksConnected(1), pool(_pool) {
+        using namespace boost::placeholders;
+
         pool.NotifyEntryRemoved.connect(boost::bind(&ConnectTrace::NotifyEntryRemoved, this, _1, _2));
     }
 
     ~ConnectTrace() {
+        using namespace boost::placeholders;
+
         pool.NotifyEntryRemoved.disconnect(boost::bind(&ConnectTrace::NotifyEntryRemoved, this, _1, _2));
     }
 
