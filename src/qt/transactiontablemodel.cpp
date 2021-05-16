@@ -778,6 +778,8 @@ static void ShowProgress(TransactionTableModel *ttm, const std::string &title, i
 
 void TransactionTableModel::subscribeToCoreSignals()
 {
+    using namespace boost::placeholders;
+
     // Connect signals to wallet
     wallet->NotifyTransactionChanged.connect(boost::bind(NotifyTransactionChanged, this, _1, _2, _3));
     wallet->ShowProgress.connect(boost::bind(ShowProgress, this, _1, _2));
@@ -785,6 +787,8 @@ void TransactionTableModel::subscribeToCoreSignals()
 
 void TransactionTableModel::unsubscribeFromCoreSignals()
 {
+    using namespace boost::placeholders;
+
     // Disconnect signals from wallet
     wallet->NotifyTransactionChanged.disconnect(boost::bind(NotifyTransactionChanged, this, _1, _2, _3));
     wallet->ShowProgress.disconnect(boost::bind(ShowProgress, this, _1, _2));
